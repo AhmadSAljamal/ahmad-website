@@ -163,28 +163,14 @@ html[lang="en"] .step .when{font-family:var(--f-en-display)}
 .mcta.show{transform:none}}
 .btn,.pill.gold{will-change:transform}
 
-/* ocean decor + sound */
-.ocean{position:relative;height:340px;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));background:linear-gradient(180deg,#03243A 0%,#0A5C78 70%,#06324F 100%)}
-.sky{position:absolute;inset:0 0 45%}
-.sun{position:absolute;top:30px;inset-inline-end:14%;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle at 40% 40%,#FFF1D0,#E8C98E);box-shadow:0 0 90px 30px rgba(246,223,176,.3);animation:sunp 8s ease-in-out infinite}
-@keyframes sunp{50%{transform:translateY(8px)}}
-.gull{position:absolute;color:rgba(234,247,248,.75);font-size:14px;letter-spacing:-4px;animation:gull 18s linear infinite}
-.g1{top:40px;animation-delay:-2s}.g2{top:70px;animation-delay:-9s;font-size:11px}.g3{top:30px;animation-delay:-14s;font-size:9px}
-@keyframes gull{from{left:-8%}to{left:108%}}
-.boat{position:absolute;bottom:118px;width:80px;animation:sail 30s linear infinite,bob 3s ease-in-out infinite;z-index:2}
-@keyframes sail{from{left:-10%}to{left:110%}}
-@keyframes bob{50%{transform:translateY(6px) rotate(-3deg)}}
-.w{position:absolute;left:0;width:200%;display:flex;animation:wv linear infinite}
-.w svg{width:50%;height:120px;display:block}
-.w1{bottom:110px;animation-duration:16s;opacity:.9}
-.w2{bottom:80px;animation-duration:11s;animation-direction:reverse}
-.w3{bottom:52px;animation-duration:8s}
-@keyframes wv{to{transform:translateX(-50%)}}
-.foam{position:absolute;left:0;right:0;bottom:44px;height:14px;background:radial-gradient(circle at 10px 7px,rgba(255,255,255,.85) 5px,transparent 6px) 0 0/22px 14px repeat-x;animation:foam 3.5s ease-in-out infinite}
-@keyframes foam{50%{transform:translateY(-6px);opacity:.6}}
-.sand{position:absolute;left:0;right:0;bottom:0;height:52px;background:linear-gradient(180deg,#E8C98E,#D9B577);display:flex;justify-content:space-around;align-items:center;font-size:22px}
-.sand span{filter:saturate(.8);animation:float 4s ease-in-out infinite}
-.sand span:nth-child(2n){animation-delay:-2s}
+/* webgl sea */
+.sea3d{position:relative;height:min(92vh,820px);min-height:520px;overflow:hidden;margin-inline:calc(-1 * max(16px,env(safe-area-inset-left,0px)));background:linear-gradient(180deg,#1b2a4a 0%,#e58a5c 45%,#f4c28a 50%,#0a4d68 52%,#03243A 100%);touch-action:pan-y}
+.sea3d canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.sea-ui{position:relative;z-index:2;height:100%;display:grid;align-content:start;gap:18px;padding-top:clamp(56px,10vh,110px);text-align:center;justify-items:center}
+.sea-title{font-size:clamp(2.8rem,8vw,6rem)!important;line-height:1.08;color:#fff;text-shadow:0 6px 40px rgba(60,20,10,.45)}
+.sea-ui .eyebrow{color:#FFE7C2;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.sea-ui .btn.ghost{color:#fff;border-color:rgba(255,255,255,.7);background:rgba(3,36,58,.25);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.sea-hint{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:2;font-size:.8rem;color:rgba(255,255,255,.75);letter-spacing:.06em;animation:float 3s ease-in-out infinite}
 footer{position:relative}
 .sound{position:fixed;inset-inline-start:max(18px,env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:31;display:flex;align-items:center;gap:8px;font:inherit;font-size:.86rem;font-weight:600;color:var(--stone);background:rgba(3,36,58,.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;padding:10px 16px;cursor:pointer}
 .sound[aria-pressed="true"]{border-color:var(--sea);box-shadow:0 0 0 4px rgba(47,211,224,.15),0 0 30px -4px rgba(47,211,224,.6)}
@@ -624,14 +610,14 @@ footer .src a{color:var(--muted)}
 </section>
 </main>
 
-<section class="ocean" aria-hidden="true">
-  <div class="sky"><span class="sun"></span><span class="gull g1">︶︶</span><span class="gull g2">︶︶</span><span class="gull g3">︶︶</span></div>
-  <div class="boat"><svg viewBox="0 0 80 70"><path d="M38 6 V48 L10 48Z" fill="#EAF7F8"/><path d="M42 12 V48 L66 48Z" fill="#E8C98E"/><path d="M6 52 H74 L64 64 H16Z" fill="#06324F"/><rect x="39" y="4" width="2" height="48" fill="#EAF7F8"/></svg></div>
-  <div class="w w1"><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#2FD3E0' fill-opacity='.35'/></svg><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#2FD3E0' fill-opacity='.35'/></svg></div>
-  <div class="w w2"><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#0A5C78' fill-opacity='.75'/></svg><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#0A5C78' fill-opacity='.75'/></svg></div>
-  <div class="w w3"><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#06324F' fill-opacity='.95'/></svg><svg viewBox='0 0 1440 120' preserveAspectRatio='none'><path d='M0 60 C 180 10 360 110 540 60 S 900 10 1080 60 S 1260 110 1440 60 V120 H0Z' fill='#06324F' fill-opacity='.95'/></svg></div>
-  <div class="foam"></div>
-  <div class="sand"><span>🐚</span><span>⭐</span><span>🐚</span><span>🦀</span><span>🐚</span><span>⭐</span></div>
+<section class="sea3d" id="sea3d">
+  <canvas id="seaGL" aria-hidden="true"></canvas>
+  <div class="sea-ui wrap">
+    <p class="eyebrow"><span data-ar>المتوسط بانتظارك</span><span data-en>The Mediterranean is waiting</span></p>
+    <h2 class="sea-title"><span data-ar>بيتك القادم<br>على البحر</span><span data-en>Your next home<br>by the sea</span></h2>
+    <div class="cta-row"><a class="btn solid" href="#register"><span data-ar>احجز أولويتك</span><span data-en>Get priority access</span></a><button class="btn ghost" type="button" id="sound2"><span data-ar>🔊 اسمع البحر</span><span data-en>🔊 Hear the sea</span></button></div>
+  </div>
+  <div class="sea-hint" aria-hidden="true"><span data-ar>حرّك الماوس أو إصبعك</span><span data-en>Move your mouse or finger</span></div>
 </section>
 <footer class="wrap">
   <p><span data-ar>صفحة تعريفية مستقلة من إعداد أحمد الجمال، مستشار عقاري. ليست الموقع الرسمي لشركة إيجل هيلز. المعلومات مأخوذة مما نشره المطوّر ووسائل الإعلام حتى تشرين الأول 2026، وقد تتغير. الصور رسوم توضيحية.</span><span data-en>An independent guide by Ahmad Al Jamal, real estate advisor. This is not Eagle Hills' official website. Information is taken from what the developer and the press published up to October 2026 and may change. Images are illustrations.</span></p>
@@ -726,6 +712,52 @@ var LEADS_URL='';
     master.gain.linearRampToValueAtTime(.9,actx.currentTime+2)}
   $('sound').addEventListener('click',function(){var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',on);
     try{if(on){if(!actx)startSea();else{actx.resume();master.gain.linearRampToValueAtTime(.9,actx.currentTime+1.5)}}else if(actx){master.gain.linearRampToValueAtTime(0,actx.currentTime+.8);setTimeout(function(){actx.suspend()},900)}}catch(e){}});
+
+  // ===== WebGL sunset sea =====
+  (function(){var cv=$('seaGL');if(!cv)return;var gl=cv.getContext('webgl',{antialias:false,premultipliedAlpha:false});if(!gl)return;
+  var vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+  var fs=`precision highp float;uniform vec2 R;uniform float T;uniform vec2 M;
+  float h21(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+  float n2(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h21(i),h21(i+vec2(1,0)),f.x),mix(h21(i+vec2(0,1)),h21(i+vec2(1,1)),f.x),f.y);}
+  float fbm(vec2 p){float a=.5,s=0.;for(int i=0;i<5;i++){s+=a*n2(p);p*=2.03;a*=.5;}return s;}
+  vec3 W(vec2 p,float t){float h=0.;vec2 d=vec2(0.);
+    vec4 dirs[6];dirs[0]=vec4(1.,.2,.9,1.1);dirs[1]=vec4(.7,.7,1.4,.8);dirs[2]=vec4(-.3,1.,2.3,.55);dirs[3]=vec4(.9,-.4,3.7,.35);dirs[4]=vec4(-.8,.5,5.9,.2);dirs[5]=vec4(.2,-1.,8.3,.12);
+    for(int i=0;i<6;i++){vec2 k=normalize(dirs[i].xy);float f=dirs[i].z*.35,a=dirs[i].w*.22;float ph=dot(k,p)*f+t*sqrt(9.8*f)*.55;h+=a*sin(ph);d+=a*f*k*cos(ph);}
+    return vec3(h,d);}
+  vec3 sky(vec3 rd){float y=max(rd.y,0.);vec3 top=vec3(.10,.15,.32),mid=vec3(.93,.52,.36),hor=vec3(1.,.80,.55);
+    vec3 c=mix(hor,mid,smoothstep(0.,.12,y));c=mix(c,top,smoothstep(.1,.6,y));
+    vec3 sd=normalize(vec3(.0,.09,1.));float s=max(dot(rd,sd),0.);c+=vec3(1.,.75,.45)*pow(s,8.)*.45+vec3(1.,.9,.7)*pow(s,900.)*4.;
+    vec2 cp=rd.xz/(rd.y+.08);float cl=smoothstep(.55,.85,fbm(cp*1.2+vec2(T*.02,0.)));c=mix(c,mix(vec3(1.,.72,.55),vec3(.55,.35,.45),y*2.),cl*.55*smoothstep(0.,.08,y));
+    return c;}
+  void main(){vec2 uv=(gl_FragCoord.xy-.5*R)/R.y;
+    vec3 ro=vec3(0.,1.25+M.y*.35,0.);float yaw=M.x*.25;vec3 fw=normalize(vec3(sin(yaw),-.06+M.y*.05,cos(yaw)));vec3 rt=normalize(cross(vec3(0,1,0),fw)),up=cross(fw,rt);
+    vec3 rd=normalize(fw+uv.x*rt+uv.y*up);vec3 col;
+    if(rd.y>=0.){col=sky(rd);}else{
+      float t=-ro.y/rd.y;vec3 p=ro+rd*t;vec3 w=W(p.xz,T);
+      vec3 nrm=normalize(vec3(-w.y,1.,-w.z));float fd=1.-exp(-t*.025);nrm=normalize(mix(nrm,vec3(0,1,0),fd*.85));
+      vec3 rf=reflect(rd,nrm);rf.y=abs(rf.y);vec3 sc=sky(rf);
+      float fres=.04+.96*pow(1.-max(dot(nrm,-rd),0.),5.);
+      vec3 deep=vec3(.01,.12,.20),shal=vec3(.02,.42,.48);vec3 water=mix(deep,shal,clamp(w.x*1.4+.35,0.,1.)*.6);
+      col=mix(water,sc,fres);
+      vec3 sd=normalize(vec3(0.,.09,1.));float sp=pow(max(dot(rf,sd),0.),220.);col+=vec3(1.,.85,.6)*sp*3.5*(1.-fd*.5);
+      float glit=step(.992,h21(floor(p.xz*90.+T*3.)))*pow(max(dot(rf,sd),0.),10.)*smoothstep(.05,.45,fd);col+=vec3(1.,.9,.7)*glit*1.6;
+      float foam=smoothstep(.16,.30,w.x+(fbm(p.xz*3.+T*.3)-.5)*.12);col=mix(col,vec3(.92,.96,.97),foam*.55*(1.-fd));
+      col=mix(col,sky(vec3(rd.x,0.001,rd.z)),pow(fd,3.));}
+    col=pow(col,vec3(.92));col*=1.-.25*dot(uv,uv);gl_FragColor=vec4(col,1.);}`;
+  function sh(t,s){var o=gl.createShader(t);gl.shaderSource(o,s);gl.compileShader(o);if(!gl.getShaderParameter(o,gl.COMPILE_STATUS)){console.warn(gl.getShaderInfoLog(o));return null}return o}
+  var v=sh(gl.VERTEX_SHADER,vs),f=sh(gl.FRAGMENT_SHADER,fs);if(!v||!f)return;var pr=gl.createProgram();gl.attachShader(pr,v);gl.attachShader(pr,f);gl.linkProgram(pr);gl.useProgram(pr);
+  var buf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,buf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),gl.STATIC_DRAW);
+  var loc=gl.getAttribLocation(pr,'p');gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+  var uR=gl.getUniformLocation(pr,'R'),uT=gl.getUniformLocation(pr,'T'),uM=gl.getUniformLocation(pr,'M');
+  var mx=0,my=0,tx=0,ty=0,vis=false,t0=performance.now(),scale=Math.min(1.25,devicePixelRatio||1)*(innerWidth<700?.7:.8);
+  function rs(){cv.width=Math.round(cv.clientWidth*scale);cv.height=Math.round(cv.clientHeight*scale);gl.viewport(0,0,cv.width,cv.height)}
+  rs();addEventListener('resize',rs);
+  var sec=$('sea3d');sec.addEventListener('pointermove',function(e){var r=sec.getBoundingClientRect();tx=((e.clientX-r.left)/r.width-.5)*2;ty=((e.clientY-r.top)/r.height-.5)*-1});
+  sec.addEventListener('pointerleave',function(){tx=0;ty=0});
+  if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)requestAnimationFrame(fr)},{rootMargin:'200px'}).observe(sec);else vis=true;
+  function fr(now){if(!vis)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,still?8.:(now-t0)/1000);gl.uniform2f(uM,mx,my);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);if(!still)requestAnimationFrame(fr)}
+  requestAnimationFrame(fr);})();
+  $('sound2').addEventListener('click',function(){$('sound').click()});
   // hero parallax
   var hv=$('heroVid');addEventListener('scroll',function(){var y=scrollY;if(y<900&&hv)hv.style.transform='translateY('+(y*.35)+'px) scale('+(1+y/3000)+')'},{passive:true});
   // 3D tilt
