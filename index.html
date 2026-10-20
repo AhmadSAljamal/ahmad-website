@@ -2174,7 +2174,7 @@ form.reg.sent .reg-done{display:grid}
 
 <script>
 /* Lead registration. Paste the Google Apps Script web-app URL here: */
-var LEADS_URL = '';
+var LEADS_URL = 'https://formsubmit.co/ajax/ahmadsamialjamal@gmail.com';
 (function(){
   var f=document.getElementById('regForm'); if(!f) return; var $=function(id){return document.getElementById(id)};
   f.querySelectorAll('.pills').forEach(function(g){g.addEventListener('click',function(e){var b=e.target.closest('button'); if(!b) return; g.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)})})});
@@ -2199,7 +2199,7 @@ var LEADS_URL = '';
     function done(){f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
     if(!LEADS_URL){done();window.open($('regWa').href,'_blank','noopener');return}
     $('regBtn').disabled=true;
-    fetch(LEADS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}).then(done,done);
+    fetch(LEADS_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(Object.assign({_subject:'عميل جديد من الموقع – '+d.name,_template:'table',_captcha:'false'},d))}).then(done,done);
   });
 })();
 </script>

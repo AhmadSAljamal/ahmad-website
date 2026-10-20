@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, FxCursor, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop, PriceExamples, BuyerChecklist } from './bits.jsx';
+import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop, PriceExamples, BuyerChecklist } from './bits.jsx';
 import { runLegacy, runMotion } from './legacy.js';
 import LOGO from './logo.png';
 
@@ -10,7 +10,6 @@ export default function App(){
     try{ runMotion(); }catch(e){ console.error('motion',e); }
   },[]);
   return (<>
-<FxCursor />
 
 
 <div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><img src={LOGO} alt="" /><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
