@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot } from './bits.jsx';
+import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, FxCursor, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop } from './bits.jsx';
 import { runLegacy, runMotion } from './legacy.js';
 import LOGO from './logo.png';
 
@@ -10,6 +10,7 @@ export default function App(){
     try{ runMotion(); }catch(e){ console.error('motion',e); }
   },[]);
   return (<>
+<FxCursor />
 
 
 <div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><img src={LOGO} alt="" /><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
@@ -38,7 +39,7 @@ export default function App(){
 </header>
 
 <section className="hero" id="top">
-  <div className="poster" aria-hidden="true"></div><video id="heroVid" autoPlay muted loop playsInline preload="metadata" poster="media/hero-latakia.jpg" aria-hidden="true"><source media="(max-width:700px)" src="https://syriacdn.eaglehills.ai/videos/Damascus-heights-refined-hero-4-mobile.mp4" type="video/mp4" /><source src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" type="video/mp4" /></video><canvas id="waves" aria-hidden="true"></canvas>
+  <div className="poster" aria-hidden="true"></div><HeroRays /><video id="heroVid" autoPlay muted loop playsInline preload="metadata" poster="media/hero-latakia.jpg" aria-hidden="true"><source media="(max-width:700px)" src="https://syriacdn.eaglehills.ai/videos/Damascus-heights-refined-hero-4-mobile.mp4" type="video/mp4" /><source src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" type="video/mp4" /></video><canvas id="waves" aria-hidden="true"></canvas>
   <div className="wrap">
     <p className="eyebrow rise live"><i></i><span data-ar="">مشروع إيجل هيلز في سوريا · التسجيل مفتوح الآن</span><span data-en="">Eagle Hills in Syria · Registration open now</span></p>
     <HeroTitle />
@@ -192,6 +193,7 @@ export default function App(){
     <Spot><article className="gcard"><b><span data-ar="">أوغاريت</span><span data-en="">Ugarit</span></b><span><span data-ar="">قرب اللاذقية، حيث وُجدت من أقدم الأبجديات المعروفة</span><span data-en="">near Latakia, home to one of the earliest known alphabets</span></span></article></Spot>
     <Spot><article className="gcard"><b><span data-ar="">المرفأ الأول</span><span data-en="">Main port</span></b><span><span data-ar="">اللاذقية بوابة سوريا البحرية الرئيسية</span><span data-en="">Latakia is Syria's principal seaport</span></span></article></Spot>
   </div>
+<HeritageSphere />
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 <section className="sec wrap rb-host" id="developer"><RBThreads />
@@ -239,13 +241,13 @@ export default function App(){
   <Gallery3D />
 </section>
 <div className="ablaq" aria-hidden="true"></div>
-<section className="sec wrap" id="videos">
+<section className="sec wrap rb-host" id="videos"><BgBeams />
   <div className="sec-head">
     <Eyebrow ar="فيديوهات" en="Films" />
     <RevealHeading ar="جولة بالفيديو" en="Video tour" />
     <p className="lead"><span data-ar="">أفلام المشروع الرسمية من إيجل هيلز.</span><span data-en="">Official project films from Eagle Hills.</span></p>
   </div>
-  <div className="vids"><div className="vcard tilt"><video controls playsInline preload="none" poster="media/dam-1.jpg"><source src="https://syriacdn.eaglehills.ai/videos/damascus-heights-final-desktop-v5.mp4" type="video/mp4" /></video><p><span data-ar="">فيلم تلال دمشق</span><span data-en="">Damascus Heights film</span> · <a href="https://syriacdn.eaglehills.ai/videos/damascus-heights-final-desktop-v5.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><video controls playsInline preload="none" poster="media/lat-1.jpg"><source src="https://syriacdn.eaglehills.ai/videos/latakia-marina-final-desktop-v6.mp4" type="video/mp4" /></video><p><span data-ar="">فيلم مارينا اللاذقية</span><span data-en="">Latakia Marina film</span> · <a href="https://syriacdn.eaglehills.ai/videos/latakia-marina-final-desktop-v6.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><video controls playsInline preload="none" poster="media/lat-4.jpg"><source src="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-latakia-hospitality-updated.mp4" type="video/mp4" /></video><p><span data-ar="">الفنادق والضيافة في اللاذقية</span><span data-en="">Latakia hospitality</span> · <a href="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-latakia-hospitality-updated.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><video controls playsInline preload="none" poster="media/dam-2.jpg"><source src="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-damascus-heights-hospitality-desktop.mp4" type="video/mp4" /></video><p><span data-ar="">الضيافة في دمشق</span><span data-en="">Damascus hospitality</span> · <a href="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-damascus-heights-hospitality-desktop.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div></div>
+  <div className="vids"><div className="vcard tilt"><Glare><video controls playsInline preload="none" poster="media/dam-1.jpg"><source src="https://syriacdn.eaglehills.ai/videos/damascus-heights-final-desktop-v5.mp4" type="video/mp4" /></video></Glare><p><span data-ar="">فيلم تلال دمشق</span><span data-en="">Damascus Heights film</span> · <a href="https://syriacdn.eaglehills.ai/videos/damascus-heights-final-desktop-v5.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><Glare><video controls playsInline preload="none" poster="media/lat-1.jpg"><source src="https://syriacdn.eaglehills.ai/videos/latakia-marina-final-desktop-v6.mp4" type="video/mp4" /></video></Glare><p><span data-ar="">فيلم مارينا اللاذقية</span><span data-en="">Latakia Marina film</span> · <a href="https://syriacdn.eaglehills.ai/videos/latakia-marina-final-desktop-v6.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><Glare><video controls playsInline preload="none" poster="media/lat-4.jpg"><source src="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-latakia-hospitality-updated.mp4" type="video/mp4" /></video></Glare><p><span data-ar="">الفنادق والضيافة في اللاذقية</span><span data-en="">Latakia hospitality</span> · <a href="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-latakia-hospitality-updated.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div><div className="vcard tilt"><Glare><video controls playsInline preload="none" poster="media/dam-2.jpg"><source src="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-damascus-heights-hospitality-desktop.mp4" type="video/mp4" /></video></Glare><p><span data-ar="">الضيافة في دمشق</span><span data-en="">Damascus hospitality</span> · <a href="https://syriacdn.eaglehills.ai/videos/syria-eaglehills-damascus-heights-hospitality-desktop.mp4" target="_blank" rel="noopener"><span data-ar="">فتح الفيديو</span><span data-en="">Open video</span></a></p></div></div>
 </section>
 <section className="story" id="story">
   <div className="story-bg"><img src="media/lat-morning.jpg" alt="" loading="lazy" data-i="0" className="on" /><img src="media/lat-pool.jpg" alt="" loading="lazy" data-i="1" /><img src="media/lat-3.jpg" alt="" loading="lazy" data-i="2" /><div className="story-shade"></div></div>
@@ -256,7 +258,7 @@ export default function App(){
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
-<section className="sec wrap" id="homes">
+<section className="sec wrap rb-host" id="homes"><BgPrism />
   <div className="sec-head">
     <Eyebrow ar="أنواع الوحدات" en="Home types" />
     <RevealHeading ar="شقة، تاون هاوس، أو فيلا" en="Apartment, townhouse or villa" />
@@ -285,13 +287,13 @@ export default function App(){
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
-<section className="sec wrap" id="price">
+<section className="sec wrap rb-host" id="price"><BgSilk />
   <div className="sec-head">
     <Eyebrow ar="حاسبة السعر" en="Price estimator" />
     <RevealHeading ar="كم قد تكلّف وحدتك؟" en="What might your home cost?" />
     <p className="lead"><span data-ar="">السعر المعلن يبدأ من 1,600 دولار للمتر المربع، ويختلف حسب الموقع والإطلالة والمواصفات. اختر المساحة لتقدير نقطة البداية.</span><span data-en="">The published price starts at $1,600 per m² and varies by location, view and specification. Pick a size to see a starting estimate.</span></p>
   </div>
-  <div className="calc">
+  <Electric><div className="calc">
     <div className="calc-in">
       <div className="field"><label><span data-ar="">نوع الوحدة</span><span data-en="">Home type</span></label>
         <div className="seg" id="typeSeg">
@@ -318,7 +320,7 @@ export default function App(){
       <p className="note"><span data-ar="">تقدير للاسترشاد فقط. الأسعار وخطط الدفع الرسمية تصدر عن المطوّر عند الإطلاق.</span><span data-en="">For guidance only. Official prices and payment plans come from the developer at launch.</span></p>
       <a className="btn solid" href="#register"><span data-ar="">احجز أولويتك</span><span data-en="">Get priority access</span></a>
     </div>
-  </div>
+  </div></Electric>
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
@@ -333,16 +335,11 @@ export default function App(){
     <article><h3><span data-ar="">السوريون في الخارج والعائدون</span><span data-en="">Syrians abroad and returnees</span></h3><p><span data-ar="">من الإمارات والخليج وأوروبا. أتابع معك كل خطوة من دبي.</span><span data-en="">From the UAE, the Gulf or Europe. I handle each step with you from Dubai.</span></p></article>
     <article><h3><span data-ar="">المستثمرون الأجانب</span><span data-en="">Foreign investors</span></h3><p><span data-ar="">يمكنهم تسجيل الاهتمام، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">They can register interest. Requests are reviewed at the developer's discretion.</span></p></article>
   </div>
-  <ol className="steps">
-    <li><h3><span data-ar="">سجّل اهتمامك</span><span data-en="">Register</span></h3><p><span data-ar="">املأ النموذج أدناه بالوجهة ونوع الوحدة.</span><span data-en="">Fill in the form below with the destination and home type.</span></p></li>
-    <li><h3><span data-ar="">مكالمة تعريفية</span><span data-en="">Intro call</span></h3><p><span data-ar="">أتواصل معك خلال يوم عمل لفهم ميزانيتك وهدفك.</span><span data-en="">I call you within one working day to understand your budget and goal.</span></p></li>
-    <li><h3><span data-ar="">الطلب الرسمي</span><span data-en="">Official request</span></h3><p><span data-ar="">أساعدك في تقديم طلبك عبر قنوات المطوّر الرسمية.</span><span data-en="">I help you file your request through the developer's official channels.</span></p></li>
-    <li><h3><span data-ar="">عند الإطلاق</span><span data-en="">At launch</span></h3><p><span data-ar="">نراجع معاً الأسعار وخطة الدفع والعقد قبل أي التزام.</span><span data-en="">We review prices, the payment plan and the contract together before you commit.</span></p></li>
-  </ol>
+  <StepsStack />
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
-<section className="sec wrap" id="timeline">
+<section className="sec wrap rb-host" id="timeline"><BgGalaxy />
   <div className="sec-head">
     <Eyebrow ar="المسار حتى اليوم" en="The story so far" />
     <RevealHeading ar="من الإعلان إلى التوقيع" en="From announcement to signing" />
@@ -358,7 +355,7 @@ export default function App(){
 
 <section className="sec wrap" id="advisor">
   <div className="adv">
-    <img src={LOGO} alt="AJ" />
+    <AdvisorOrb logo={LOGO} />
     <div>
       <Eyebrow ar="لماذا من خلالي" en="Why through me" />
       <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">أحمد سامي الجمال</span><span data-en="">Ahmad Sami Al Jamal</span></h2>
@@ -371,7 +368,7 @@ export default function App(){
   </div>
 </section>
 
-<section className="sec wrap" id="faq">
+<section className="sec wrap rb-host" id="faq"><BgDots />
   <div className="sec-head">
     <Eyebrow ar="أسئلة شائعة" en="FAQ" />
     <RevealHeading ar="قبل أن تسجّل" en="Before you register" />
@@ -427,6 +424,7 @@ export default function App(){
 </section>
 </main>
 
+<SeaLoop />
 <section className="sea3d" id="sea3d">
   <canvas id="seaGL" aria-hidden="true"></canvas>
   <div className="sea-ui wrap">
