@@ -1,6 +1,6 @@
 /* Imperative page behaviour (ported from the single-file version). Runs once after React mounts. */
 export function runLegacy(){
-var LEADS_URL='https://formsubmit.co/ajax/ahmadsamialjamal@gmail.com';
+var LEADS_URL='https://script.google.com/macros/s/AKfycbxi3TzpeHf_SGZ4rcmjmcS4PxEmK0AhwL6NryRICbz4qt7bat2BM_SnOxp6bqWJq38zSw/exec';
 (function(){
   var root=document.documentElement, $=function(id){return document.getElementById(id)};
   function setLang(l){root.lang=l;root.dir=l==='ar'?'rtl':'ltr';window.dispatchEvent(new CustomEvent('langchange',{detail:l}));try{localStorage.setItem('ehs-lang',l)}catch(e){}calc()}
@@ -35,7 +35,7 @@ var LEADS_URL='https://formsubmit.co/ajax/ahmadsamialjamal@gmail.com';
     $('rWa').href='https://wa.me/971555550035?text='+encodeURIComponent(msg);
     function done(){f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
     if(!LEADS_URL){done();return}
-    $('rBtn').disabled=true; var body=Object.assign({_subject:'عميل جديد – Eagle Hills Syria – '+d.name,_template:'table',_captcha:'false'},d); fetch(LEADS_URL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(body)}).then(done,done);
+    $('rBtn').disabled=true; fetch(LEADS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}).then(done,done);
   });
   // sea waves + bubbles canvas
   var c=$('waves'),g=c.getContext('2d'),still=matchMedia('(prefers-reduced-motion: reduce)').matches,t0=performance.now(),bub=[];
