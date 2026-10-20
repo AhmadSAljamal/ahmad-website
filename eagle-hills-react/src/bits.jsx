@@ -48,7 +48,7 @@ const GAL = [
   ['lat-marina', 'المارينا', 'The marina'], ['dam-vert', 'تلال دمشق', 'Damascus Heights'], ['lat-front', 'الواجهة البحرية', 'The waterfront'],
   ['lat-park', 'مدينة الألعاب', 'Theme park'], ['lat-life', 'الحياة على البحر', 'Life by the sea'], ['umayyad', 'الجامع الأموي', 'Umayyad Mosque'],
   ['khan', 'خان أسعد باشا', "Khan As'ad Pasha"], ['azm', 'قصر العظم', 'Azm Palace'], ['souq', 'سوق الحميدية', 'Al-Hamidiyah Souq'],
-  ['coast-1', 'ساحل اللاذقية', 'Latakia coast'], ['coast-2', 'خليج اللاذقية', 'Latakia bay']
+  ['coast-1', 'ساحل اللاذقية', 'Latakia coast'], ['coast-2', 'خليج اللاذقية', 'Latakia bay'], ['lat-3', 'سهرة على البحر', 'Evenings by the sea'], ['lat-pool', 'رياضات مائية', 'Water sports'], ['lat-1', 'النادي الشاطئي', 'Beach club']
 ];
 export function Gallery3D(){
   const lang = useLang();
