@@ -1,0 +1,42 @@
+name: Fetch Eagle Hills media
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['eagle-hills-syria/media-list.txt', '.github/workflows/fetch-media.yml']
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download images (resized to 1600px)
+        run: |
+          sudo apt-get install -y -qq webp >/dev/null 2>&1 || true
+          mkdir -p eagle-hills-syria/media
+          while read -r name url; do
+            [ -z "$name" ] && continue
+            curl -fsSL -A "Mozilla/5.0" -o "/tmp/$name" "$url" || { echo "FAILED $name"; continue; }
+            out="eagle-hills-syria/media/${name%.*}.jpg"
+            python3 - "$name" "$out" <<'PY'
+          import sys,subprocess
+          src='/tmp/'+sys.argv[1]; out=sys.argv[2]
+          try:
+              from PIL import Image
+          except ImportError:
+              subprocess.run([sys.executable,'-m','pip','install','-q','pillow'],check=True); from PIL import Image
+          im=Image.open(src).convert('RGB'); w,h=im.size
+          if w>1600: im=im.resize((1600,round(h*1600/w)),Image.LANCZOS)
+          im.save(out,'JPEG',quality=82,optimize=True,progressive=True)
+          print('ok',out,im.size)
+          PY
+          done < eagle-hills-syria/media-list.txt
+          ls -la eagle-hills-syria/media
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add eagle-hills-syria/media
+          git diff --cached --quiet || git commit -m "Add Eagle Hills Syria media"
+          git push
