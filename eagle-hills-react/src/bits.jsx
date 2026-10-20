@@ -175,3 +175,32 @@ export function SeaLoop(){
   const t = lang === 'ar' ? 'دمشق ✦ اللاذقية ✦ إيجل هيلز ✦ بيتك على المتوسط ✦ ' : 'Damascus ✦ Latakia ✦ Eagle Hills ✦ Your home on the Mediterranean ✦ ';
   return <div className="curved-wrap" aria-hidden="true"><CurvedLoop key={lang} marqueeText={t} speed={1.6} curveAmount={260} direction={lang === 'ar' ? 'right' : 'left'} interactive fontSize={84} fontWeight={800} color="#EAF7F8" edgeFade={0.2} scrollBoost={1} /></div>;
 }
+
+/* quick price examples at the published starting rate ($1,600/m²) */
+export function PriceExamples(){
+  const lang = useLang();
+  const sizes = [80, 100, 120, 150, 200];
+  const pick = a => { const r = document.getElementById('area'); if (!r) return; r.value = a; r.dispatchEvent(new Event('input', { bubbles: true })); };
+  return (
+    <div className="px-row">
+      <p className="mini-h">{lang === 'ar' ? 'أمثلة سريعة بسعر البداية 1,600$/م² (اضغط للتجربة):' : 'Quick examples at the $1,600/m² starting rate (tap to try):'}</p>
+      <div className="px-chips">
+        {sizes.map(s => <button type="button" key={s} onClick={() => pick(s)}><b>{s} m²</b><span>${(s * 1600).toLocaleString('en-US')}</span></button>)}
+      </div>
+    </div>
+  );
+}
+
+export function BuyerChecklist(){
+  const lang = useLang();
+  const items = lang === 'ar'
+    ? ['ترخيص المشروع وتسجيله الرسمي', 'الوثائق القانونية وملكية الأرض', 'بنود العقد بالتفصيل', 'جدول التسليم المكتوب', 'خطة الدفع ومواعيد الدفعات', 'سياسة الاسترداد والإلغاء']
+    : ['Project licence and official registration', 'Legal documents and land title', 'Contract terms in full', 'A written delivery schedule', 'Payment plan and instalment dates', 'Refund and cancellation policy'];
+  return (
+    <details className="check-faq" open>
+      <summary>{lang === 'ar' ? 'شو لازم تتأكد منه قبل الشراء؟' : 'What should you check before buying?'}</summary>
+      <ul className="buy-check">{items.map((t, i) => <li key={i}><i>✓</i>{t}</li>)}</ul>
+      <p>{lang === 'ar' ? 'تسجيل الاهتمام لا يعني حجزاً مؤكداً. أراجع معك كل هذه النقاط قبل أي دفعة.' : 'Registering interest is not a confirmed booking. I review every point with you before any payment.'}</p>
+    </details>
+  );
+}

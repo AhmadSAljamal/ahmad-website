@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, FxCursor, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop } from './bits.jsx';
+import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, FxCursor, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop, PriceExamples, BuyerChecklist } from './bits.jsx';
 import { runLegacy, runMotion } from './legacy.js';
 import LOGO from './logo.png';
 
@@ -321,6 +321,7 @@ export default function App(){
       <a className="btn solid" href="#register"><span data-ar="">احجز أولويتك</span><span data-en="">Get priority access</span></a>
     </div>
   </div></Electric>
+<PriceExamples />
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
@@ -374,7 +375,8 @@ export default function App(){
     <RevealHeading ar="قبل أن تسجّل" en="Before you register" />
   </div>
   <div>
-    <details><summary><span data-ar="">هل التسجيل يُلزمني بالشراء؟</span><span data-en="">Does registering commit me to buy?</span></summary><p><span data-ar="">لا. تسجيل الاهتمام لا يُنشئ أي التزام أو علاقة تعاقدية، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">No. Registering interest creates no obligation or contract, and requests are reviewed at the developer's discretion.</span></p></details>
+    <BuyerChecklist />
+<details><summary><span data-ar="">هل التسجيل يُلزمني بالشراء؟</span><span data-en="">Does registering commit me to buy?</span></summary><p><span data-ar="">لا. تسجيل الاهتمام لا يُنشئ أي التزام أو علاقة تعاقدية، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">No. Registering interest creates no obligation or contract, and requests are reviewed at the developer's discretion.</span></p></details>
     <details><summary><span data-ar="">هل أُعلنت خطة الدفع ومواعيد التسليم؟</span><span data-en="">Are the payment plan and handover dates out?</span></summary><p><span data-ar="">ليس بعد. المعلن حالياً هو سعر البداية 1,600 دولار للمتر المربع. سأرسل لك التفاصيل فور صدورها.</span><span data-en="">Not yet. The published figure so far is a starting price of $1,600 per m². I will send you details as soon as they are released.</span></p></details>
     <details><summary><span data-ar="">أعيش خارج سوريا، هل أستطيع الشراء؟</span><span data-en="">I live outside Syria. Can I buy?</span></summary><p><span data-ar="">نعم، السوريون في الخارج من الفئات التي يذكرها المطوّر بالأولوية. أتابع معك الإجراءات من دبي.</span><span data-en="">Yes. Syrians abroad are among the groups the developer names for priority. I handle the process with you from Dubai.</span></p></details>
     <details><summary><span data-ar="">ما الفرق بين دمشق واللاذقية؟</span><span data-en="">Damascus or Latakia?</span></summary><p><span data-ar="">دمشق مجتمع سكني كبير مع مدارس ومستشفى وملعب غولف، يناسب السكن الدائم. اللاذقية وجهة بحرية مع مارينا وفنادق ونادٍ شاطئي، تناسب البيت الثاني والاستثمار السياحي.</span><span data-en="">Damascus is a large residential community with schools, a hospital and golf, suited to full-time living. Latakia is a seaside destination with a marina, hotels and a beach club, suited to second homes and holiday investment.</span></p></details>
