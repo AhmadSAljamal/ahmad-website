@@ -213,7 +213,7 @@ export default function App(){
 <section className="sec wrap rb-host" id="founder"><RBParticles />
   <div className="founder">
     <div className="f-card">
-      <div className="mono" aria-hidden="true"><span>MA</span></div>
+      <div className="mono portrait"><img src="media/alabbar.jpg" alt="Mohamed Alabbar" loading="lazy" /></div>
       <Eyebrow ar="المؤسس ورئيس مجلس الإدارة" en="Founder and Chairman" />
       <RevealHeading ar="محمد العبار" en="Mohamed Alabbar" />
       <p className="lead"><span data-ar="">رجل الأعمال الإماراتي الذي أسّس إعمار العقارية، الشركة التي بنت برج خليفة ودبي مول. أسّس أيضاً منصة نون، ويرأس مجموعة أمريكانا، ويقود اليوم إيجل هيلز.</span><span data-en="">The Emirati businessman who founded Emaar Properties, the company behind Burj Khalifa and The Dubai Mall. He also founded noon, chairs Americana Group, and today leads Eagle Hills.</span></p>
