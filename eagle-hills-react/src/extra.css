@@ -1,0 +1,20 @@
+/* React Bits integration */
+.rb-host{position:relative;isolation:isolate}
+.rb-bg{position:absolute;top:0;bottom:0;left:calc(50% - 50vw);width:100vw;z-index:-1;pointer-events:auto;opacity:.9;mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent);-webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 85%,transparent)}
+.rb-bg > *{width:100%;height:100%}
+#developer .rb-bg,#founder .rb-bg{pointer-events:none}
+.hero-title{display:block}
+.hero-title .split-parent{display:inline!important;overflow:visible!important}
+.hero-title .grad .split-word,.hero-title .grad > *{background:linear-gradient(100deg,#7CF3FF 0%,#FFFFFF 45%,#F3D29A 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-title .hero-seg{margin-inline-end:.25em}
+.rv-h2{margin:0!important}
+.rv-h2 .rv-h2-text{font-size:inherit!important;line-height:inherit!important;font-weight:inherit!important}
+html[lang="ar"] .rv-h2{font-family:var(--f-ar-display);font-weight:800;font-size:clamp(2.2rem,5.4vw,4.2rem);line-height:1.12}
+html[lang="en"] .rv-h2{font-family:var(--f-en-display);font-weight:800;letter-spacing:-.035em;font-size:clamp(1.9rem,4.4vw,3.4rem);line-height:1.08}
+.eyebrow .shiny-text{color:inherit}
+.eyebrow::after{display:none}
+.spot-wrap{border-radius:var(--r);height:100%}
+.spot-wrap .gcard{height:100%}
+.gal3d{position:relative;height:min(70vh,620px);margin-inline:calc(50% - 50vw);width:100vw}
+.gal3d .circular-gallery{height:100%}
+.gal-hint{position:absolute;bottom:8px;left:0;right:0;text-align:center;color:var(--muted);font-size:.85rem}

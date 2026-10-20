@@ -8,32 +8,27 @@ permissions:
   contents: write
 jobs:
   fetch:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
-      - name: Download images (resized to 1600px)
+      - name: Download images (resized to 1600px JPEG)
+        shell: bash
         run: |
-          sudo apt-get install -y -qq webp >/dev/null 2>&1 || true
+          set +e
+          command -v convert || (sudo apt-get update -qq && sudo apt-get install -y -qq imagemagick webp)
           mkdir -p eagle-hills-syria/media
+          ok=0
           while read -r name url; do
             [ -z "$name" ] && continue
-            curl -fsSL -A "Mozilla/5.0" -o "/tmp/$name" "$url" || { echo "FAILED $name"; continue; }
-            out="eagle-hills-syria/media/${name%.*}.jpg"
-            python3 - "$name" "$out" <<'PY'
-          import sys,subprocess
-          src='/tmp/'+sys.argv[1]; out=sys.argv[2]
-          try:
-              from PIL import Image
-          except ImportError:
-              subprocess.run([sys.executable,'-m','pip','install','-q','pillow'],check=True); from PIL import Image
-          im=Image.open(src).convert('RGB'); w,h=im.size
-          if w>1600: im=im.resize((1600,round(h*1600/w)),Image.LANCZOS)
-          im.save(out,'JPEG',quality=82,optimize=True,progressive=True)
-          print('ok',out,im.size)
-          PY
+            if curl -fsSL -A "Mozilla/5.0" -o "/tmp/$name" "$url"; then
+              out="eagle-hills-syria/media/${name%.*}.jpg"
+              if convert "/tmp/$name" -resize '1600x>' -quality 82 -interlace Plane "$out"; then ok=$((ok+1)); echo "ok $out"; else echo "CONVERT FAILED $name"; fi
+            else echo "DOWNLOAD FAILED $name"; fi
           done < eagle-hills-syria/media-list.txt
           ls -la eagle-hills-syria/media
+          echo "converted $ok"
       - name: Commit
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
