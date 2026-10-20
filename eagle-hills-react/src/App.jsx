@@ -6,6 +6,7 @@ import LOGO from './logo.png';
 export default function App(){
   useEffect(()=>{
     document.querySelectorAll('video[autoplay]').forEach(v=>{v.muted=true;v.play().catch(()=>{})});
+    {const hv=document.getElementById('heroVid');if(hv){let done=0;const go=()=>{if(done)return;done=1;hv.preload='auto';hv.load();hv.play().catch(()=>{})};const later=()=>setTimeout(go,matchMedia('(max-width:700px)').matches?1800:600);document.readyState==='complete'?later():addEventListener('load',later,{once:true});setTimeout(go,4000)}}
     try{ runLegacy(); }catch(e){ console.error('legacy',e); }
     try{ runMotion(); }catch(e){ console.error('motion',e); }
   },[]);
@@ -21,10 +22,8 @@ export default function App(){
     <a className="brand" href="#top"><img src={LOGO} alt="AJ" /><span><b><span data-ar="">أحمد الجمال</span><span data-en="">Ahmad Al Jamal</span></b><span data-ar="">مستشار عقاري</span><span data-en="">Real estate advisor</span></span></a>
     <nav className="links" aria-label="Sections">
       <a href="#destinations"><span data-ar="">الوجهتان</span><span data-en="">Destinations</span></a>
-      <a href="#map"><span data-ar="">الخريطة</span><span data-en="">Map</span></a>
       <a href="#developer"><span data-ar="">المطوّر</span><span data-en="">Developer</span></a>
       <a href="#gallery"><span data-ar="">الصور</span><span data-en="">Gallery</span></a>
-      <a href="#videos"><span data-ar="">فيديو</span><span data-en="">Videos</span></a>
       <a href="#homes"><span data-ar="">الوحدات</span><span data-en="">Homes</span></a>
       <a href="#price"><span data-ar="">السعر</span><span data-en="">Price</span></a>
       <a href="#invest"><span data-ar="">الاستثمار</span><span data-en="">Invest</span></a>
@@ -38,7 +37,7 @@ export default function App(){
 </header>
 
 <section className="hero" id="top">
-  <div className="poster" aria-hidden="true"></div><HeroRays /><video id="heroVid" autoPlay muted loop playsInline preload="metadata" poster="media/hero-latakia.jpg" aria-hidden="true"><source media="(max-width:700px)" src="https://syriacdn.eaglehills.ai/videos/Damascus-heights-refined-hero-4-mobile.mp4" type="video/mp4" /><source src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" type="video/mp4" /></video><canvas id="waves" aria-hidden="true"></canvas>
+  <div className="poster" aria-hidden="true"></div><HeroRays /><video id="heroVid" muted loop playsInline preload="none" poster="media/hero-latakia.jpg" aria-hidden="true"><source media="(max-width:700px)" src="https://syriacdn.eaglehills.ai/videos/Damascus-heights-refined-hero-4-mobile.mp4" type="video/mp4" /><source src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" type="video/mp4" /></video><canvas id="waves" aria-hidden="true"></canvas>
   <div className="wrap">
     <p className="eyebrow rise live"><i></i><span data-ar="">مشروع إيجل هيلز في سوريا · التسجيل مفتوح الآن</span><span data-en="">Eagle Hills in Syria · Registration open now</span></p>
     <HeroTitle />
@@ -152,7 +151,7 @@ export default function App(){
 <section className="sec wrap" id="map">
   <div className="sec-head">
     <Eyebrow ar="على الخريطة" en="On the map" />
-    <RevealHeading ar="وين المشروع بسوريا؟" en="Where in Syria?" />
+    <RevealHeading ar="أين يقع المشروعان؟" en="Where in Syria?" />
     <p className="lead"><span data-ar="">وجهة في العاصمة دمشق، وأخرى على ساحل اللاذقية. المسافة بينهما نحو 230 كم بخط مستقيم.</span><span data-en="">One destination in the capital, Damascus, and one on the Latakia coast, about 230 km apart in a straight line.</span></p>
   </div>
   <div className="tmap" id="tmap">
@@ -251,8 +250,8 @@ export default function App(){
 <section className="story" id="story">
   <div className="story-bg"><img src="media/lat-morning.jpg" alt="" loading="lazy" data-i="0" className="on" /><img src="media/lat-pool.jpg" alt="" loading="lazy" data-i="1" /><img src="media/lat-3.jpg" alt="" loading="lazy" data-i="2" /><div className="story-shade"></div></div>
   <div className="story-steps wrap">
-    <Eyebrow ar="يوم في حياتك هناك" en="A day in your life there" />
-<article className="step" data-i="0"><span className="when"><span data-ar="">الصباح</span><span data-en="">Morning</span></span><p><span data-ar="">قهوة على الشرفة والبحر قدامك، والمارينا عم تصحى.</span><span data-en="">Coffee on the terrace with the sea in front of you, as the marina wakes up.</span></p></article><article className="step" data-i="1"><span className="when"><span data-ar="">الظهر</span><span data-en="">Afternoon</span></span><p><span data-ar="">إبحار، غوص، أو استرخاء بالنادي الشاطئي والمسبح المطل على البحر.</span><span data-en="">Sailing, diving, or a slow afternoon at the beach club pool.</span></p></article><article className="step" data-i="2"><span className="when"><span data-ar="">المساء</span><span data-en="">Evening</span></span><p><span data-ar="">عشاء على الكورنيش، أو سهرة بالشام القديمة على بعد عشرين دقيقة.</span><span data-en="">Dinner on the promenade, or a night in Old Damascus twenty minutes away.</span></p></article>
+    <Eyebrow ar="يوم من حياتك هناك" en="A day in your life there" />
+<article className="step" data-i="0"><span className="when"><span data-ar="">الصباح</span><span data-en="">Morning</span></span><p><span data-ar="">قهوة على الشرفة أمام البحر، والمارينا تستيقظ على يوم جديد.</span><span data-en="">Coffee on the terrace with the sea in front of you, as the marina wakes up.</span></p></article><article className="step" data-i="1"><span className="when"><span data-ar="">الظهر</span><span data-en="">Afternoon</span></span><p><span data-ar="">إبحار، غوص، أو استرخاء بالنادي الشاطئي والمسبح المطل على البحر.</span><span data-en="">Sailing, diving, or a slow afternoon at the beach club pool.</span></p></article><article className="step" data-i="2"><span className="when"><span data-ar="">المساء</span><span data-en="">Evening</span></span><p><span data-ar="">عشاء على الكورنيش، أو أمسية في دمشق القديمة على بُعد عشرين دقيقة.</span><span data-en="">Dinner on the promenade, or a night in Old Damascus twenty minutes away.</span></p></article>
   </div>
 </section>
 <div className="ablaq" aria-hidden="true"></div>

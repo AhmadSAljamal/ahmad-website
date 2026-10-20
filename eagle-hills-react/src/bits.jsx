@@ -32,12 +32,12 @@ export function HeroTitle(){
 
 export function RevealHeading({ ar, en }){
   const lang = useLang();
-  return <ScrollReveal key={lang} containerClassName="rv-h2" textClassName="rv-h2-text" baseOpacity={0.12} baseRotation={2} blurStrength={6} wordAnimationEnd="bottom 55%">{lang === 'ar' ? ar : en}</ScrollReveal>;
+  return <h2 key={lang} className="scroll-reveal rv-h2"><span className="scroll-reveal-text rv-h2-text">{lang === 'ar' ? ar : en}</span></h2>;
 }
 
 export function Eyebrow({ ar, en }){
   const lang = useLang();
-  return <p className="eyebrow"><ShinyText key={lang} text={lang === 'ar' ? ar : en} color="#9FF3FA" shineColor="#ffffff" speed={2.6} /></p>;
+  return <p className="eyebrow">{lang === 'ar' ? ar : en}</p>;
 }
 
 export function Spot({ children }){
@@ -54,15 +54,15 @@ export function Gallery3D(){
   const lang = useLang();
   const items = GAL.map(g => ({ image: M(g[0]), text: lang === 'ar' ? g[1] : g[2] }));
   return (
-    <div className="gal3d" data-lenis-prevent-wheel="">
-      <CircularGallery key={lang} items={items} bend={2.4} textColor="#EAF7F8" borderRadius={0.06} scrollSpeed={2} scrollEase={0.06}
+    <div className="gal3d">
+      <CircularGallery key={lang} items={items} bend={0.8} textColor="#EAF7F8" borderRadius={0.06} scrollSpeed={2} scrollEase={0.06}
         font="600 26px Alexandria, IBM Plex Sans Arabic, sans-serif" autoScroll={still ? 0 : 0.4} itemAspect={0.72} />
-      <p className="gal-hint">{lang === 'ar' ? 'اسحب أو مرّر للتنقل بين الصور' : 'Drag or scroll to browse'}</p>
+      <p className="gal-hint">{lang === 'ar' ? 'اسحب يميناً ويساراً للتنقل بين الصور' : 'Drag sideways to browse'}</p>
     </div>
   );
 }
 
-const Bg = ({ children }) => <div className="rb-bg" aria-hidden="true">{children}</div>;
+const Bg = () => null; // section WebGL backgrounds off for speed
 export const RBThreads = () => <Bg><Threads color={[0.18, 0.83, 0.88]} accentColor={[0.95, 0.82, 0.6]} amplitude={1.2} distance={0.3} lineCount={60} enableMouseInteraction paused={still} opacity={0.55} /></Bg>;
 export const RBParticles = () => <Bg><Particles particleCount={260} particleSpread={11} speed={0.08} particleColors={['#7CF3FF', '#F3D29A', '#ffffff']} moveParticlesOnHover alphaParticles particleBaseSize={90} disableRotation={false} connections /></Bg>;
 export const RBAurora = () => <Bg><Aurora colorStops={['#0FB5C9', '#1D4ED8', '#F3D29A']} amplitude={1.1} blend={0.55} speed={0.6} opacity={0.75} paused={still} /></Bg>;
@@ -144,7 +144,7 @@ export function HeritageSphere(){
   return (
     <div className="sphere-wrap">
       <Lazy margin="300px"><InfiniteMenu key={lang} items={items} grayscale={false} dim={0.25} autoplay={3} accentColor="#2FD3E0" backgroundColor="#021522" /></Lazy>
-      <p className="gal-hint">{lang === 'ar' ? 'اسحب الكرة لتستكشف سوريا' : 'Drag the sphere to explore Syria'}</p>
+      <p className="gal-hint">{lang === 'ar' ? 'اسحب الكرة لاستكشاف سوريا' : 'Drag the sphere to explore Syria'}</p>
     </div>
   );
 }
@@ -198,7 +198,7 @@ export function BuyerChecklist(){
     : ['Project licence and official registration', 'Legal documents and land title', 'Contract terms in full', 'A written delivery schedule', 'Payment plan and instalment dates', 'Refund and cancellation policy'];
   return (
     <details className="check-faq" open>
-      <summary>{lang === 'ar' ? 'شو لازم تتأكد منه قبل الشراء؟' : 'What should you check before buying?'}</summary>
+      <summary>{lang === 'ar' ? 'ما الذي يجب التحقق منه قبل الشراء؟' : 'What should you check before buying?'}</summary>
       <ul className="buy-check">{items.map((t, i) => <li key={i}><i>✓</i>{t}</li>)}</ul>
       <p>{lang === 'ar' ? 'تسجيل الاهتمام لا يعني حجزاً مؤكداً. أراجع معك كل هذه النقاط قبل أي دفعة.' : 'Registering interest is not a confirmed booking. I review every point with you before any payment.'}</p>
     </details>

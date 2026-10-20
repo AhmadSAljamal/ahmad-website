@@ -58,3 +58,16 @@ html[lang="en"] .rv-h2{font-family:var(--f-en-display);font-weight:800;letter-sp
 .buy-check li{display:flex;gap:10px;align-items:center;padding:12px 14px;border-radius:14px;background:rgba(47,211,224,.06);border:1px solid rgba(47,211,224,.18)}
 .buy-check i{font-style:normal;color:#021522;background:#2FD3E0;border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:.8rem;flex:none}
 @media (max-width:600px){.buy-check{grid-template-columns:minmax(0,1fr)}}
+
+/* professional polish */
+.grain,.glow,.sound,.dest-art .glare{display:none!important}
+.tilt{transform:none!important;will-change:auto}
+.rv-h2 .rv-h2-text{display:block;color:var(--stone,#EAF7F8)}
+.scroll-reveal.rv-h2{margin:0!important}
+.sec-head .lead{opacity:.88}.hero:after{background:linear-gradient(0deg,#021522 3%,#021522b3 38%,#0215224d 70%,#021522b3)!important}
+html[dir=rtl] .hero:before,html[dir=ltr] .hero:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none}
+html[dir=rtl] .hero:before{background:linear-gradient(270deg,#021522cc 0%,#02152266 45%,transparent 75%)}
+html[dir=ltr] .hero:before{background:linear-gradient(90deg,#021522cc 0%,#02152266 45%,transparent 75%)}
+.hero h1{font-size:clamp(2.8rem,7.4vw,6.4rem)!important;text-shadow:0 4px 30px rgba(0,0,0,.35)!important}
+html[lang=en] .hero h1{font-size:clamp(2.4rem,5.6vw,4.8rem)!important}
+.hero .sub{color:#fff!important;text-shadow:0 2px 14px rgba(0,0,0,.5)}

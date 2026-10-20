@@ -912,7 +912,7 @@ const CircularGallery = ({
 
     const onWheel = event => {
       const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? view.height : 1;
-      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : event.deltaY;
+      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY) ? event.deltaX : 0;
       if (!delta) return;
       event.preventDefault();
       state.target += delta * unit * (settingsRef.current.scrollSpeed / 2);
