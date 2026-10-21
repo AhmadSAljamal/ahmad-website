@@ -13,13 +13,13 @@ export default function App(){
   return (<>
 
 
-<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><svg className="se-mark" style={{width:72,height:72}} viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="seg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#C9963F"/><stop offset=".55" stopColor="#F3D29A"/><stop offset="1" stopColor="#FFF1D2"/></linearGradient></defs><g fill="none" stroke="url(#seg)" strokeLinecap="round"><path d="M13 39C21 24 35 14 55 11" strokeWidth="4"/><path d="M18 41C26 31 37 24 50 22.5" strokeWidth="3.6"/><path d="M23 43C29.5 36.5 37 32.5 45.5 32" strokeWidth="3.2"/></g><path d="M8 50c5-3.6 9.6-3.6 14.4 0s9.6 3.6 14.4 0 9.6-3.6 14.4 0 6.5 2.6 9 1.6" fill="none" stroke="#2FD3E0" strokeWidth="3" strokeLinecap="round"/></svg><strong className="se-word" style={{display:"block",margin:"10px 0 4px"}}>SYRIAN EAGLE</strong><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
+<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><img className="se-intro" src="brand/logo-gold.png" alt="Syrian Eagle Properties" /><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
 <div className="glow" id="glow" aria-hidden="true"></div>
 <div className="scroll-prog" id="prog" aria-hidden="true"></div>
 <div className="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div className="grain" aria-hidden="true"></div>
 <header className="top">
   <div className="wrap">
-    <a className="brand se" href="#top" aria-label="Syrian Eagle"><svg className="se-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="seg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#C9963F"/><stop offset=".55" stopColor="#F3D29A"/><stop offset="1" stopColor="#FFF1D2"/></linearGradient></defs><g fill="none" stroke="url(#seg)" strokeLinecap="round"><path d="M13 39C21 24 35 14 55 11" strokeWidth="4"/><path d="M18 41C26 31 37 24 50 22.5" strokeWidth="3.6"/><path d="M23 43C29.5 36.5 37 32.5 45.5 32" strokeWidth="3.2"/></g><path d="M8 50c5-3.6 9.6-3.6 14.4 0s9.6 3.6 14.4 0 9.6-3.6 14.4 0 6.5 2.6 9 1.6" fill="none" stroke="#2FD3E0" strokeWidth="3" strokeLinecap="round"/></svg><strong className="se-word">SYRIAN EAGLE</strong><span><span data-ar="">دليل مشاريع سوريا الجديدة</span><span data-en="">Guide to Syria's new projects</span></span></a>
+    <a className="brand se" href="#top" aria-label="Syrian Eagle"><img className="se-mark" src="brand/mark-gold.png" alt="" /><strong className="se-word">SYRIAN EAGLE</strong><span><span data-ar="">دليل مشاريع سوريا الجديدة</span><span data-en="">Guide to Syria's new projects</span></span></a>
     <nav className="links" aria-label="Sections">
       <a href="#destinations"><span data-ar="">الوجهتان</span><span data-en="">Destinations</span></a>
       <a href="#developer"><span data-ar="">المطوّر</span><span data-en="">Developer</span></a>
@@ -354,7 +354,7 @@ export default function App(){
 
 <section className="sec wrap" id="advisor">
   <div className="adv">
-    <AdvisorOrb logo="brand/mark.svg" />
+    <AdvisorOrb logo="brand/mark-gold.png" />
     <div>
       <Eyebrow ar="لماذا Syrian Eagle" en="Why Syrian Eagle" />
       <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">فريق في دبي يعرف المشاريع على المخطط</span><span data-en="">A Dubai team that knows off-plan</span></h2>

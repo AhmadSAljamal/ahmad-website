@@ -78,3 +78,5 @@ html[lang=en] .hero h1{font-size:clamp(2.4rem,5.6vw,4.8rem)!important}
 .se-word{font-family:Unbounded,Alexandria,sans-serif;font-weight:600;font-size:.9rem;letter-spacing:.14em;color:var(--stone,#EAF7F8);white-space:nowrap;direction:ltr}
 .brand.se>span{border-inline-start:1px solid rgba(234,247,248,.2);padding-inline-start:10px}
 @media (max-width:420px){.se-word{font-size:.68rem;letter-spacing:.05em}.se-mark{width:28px;height:28px}}
+.se-mark{object-fit:contain}
+.se-intro{width:min(240px,60vw);height:auto;display:block;margin:0 auto 8px}
