@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" href="brand/icon-64.png">
 <link rel="apple-touch-icon" href="brand/profile.png">
 <meta name="theme-color" content="#0E3A4A">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Syrian Eagle Properties","url":"https://ahmadsaljamal.github.io/ahmad-website/syrian-eagle/","logo":"https://ahmadsaljamal.github.io/ahmad-website/syrian-eagle/brand/logo-full.jpg","telephone":"+971555550035","areaServed":["Syria","Damascus","Latakia"],"knowsLanguage":["ar","en"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"RealEstateAgent","name":"Syrian Eagle Properties","url":"https://ahmadsaljamal.github.io/ahmad-website/syrian-eagle/","logo":"https://ahmadsaljamal.github.io/ahmad-website/syrian-eagle/brand/logo-full.jpg","areaServed":["Syria","Damascus","Latakia"],"knowsLanguage":["ar","en"]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Marcellus&display=swap">
@@ -561,7 +561,7 @@ html[lang="en"] .bsteps li::before{content:counter(b)}
     <div>
       <h2><span data-ar>كن من أوائل من يعرف</span><span data-en>Be among the first to know</span></h2>
       <p class="lead"><span data-ar>اترك بياناتك وسنتواصل معك خلال يوم عمل واحد، ونرسل لك الأسعار والمخططات فور صدورها.</span><span data-en>Leave your details and we'll call within one working day, and send prices and plans the moment they are released.</span></p>
-      <div class="contact"><span class="num" id="num">+971 55 555 0035</span><button class="btn outline" type="button" id="copyNum" style="padding:9px 18px;font-size:14px"><span data-ar>نسخ الرقم</span><span data-en>Copy number</span></button></div>
+      <div class="contact"><a class="btn outline" href="https://wa.me/971555550035" target="_blank" rel="noopener" style="padding:9px 18px;font-size:14px"><span data-ar>راسلنا على واتساب</span><span data-en>Message us on WhatsApp</span></a></div>
     </div>
     <form id="rf" novalidate>
       <div class="field"><span class="flabel"><span data-ar>الوجهة</span><span data-en>Destination</span></span>
@@ -601,7 +601,7 @@ html[lang="en"] .bsteps li::before{content:counter(b)}
 </section>
 </main>
 
-<section class="foot-big"><div class="wrap"><img src="brand/logo-gold.png" alt="Syrian Eagle Properties"><div class="fc"><span data-ar>تواصل معنا</span><span data-en>Talk to us</span><b>+971 55 555 0035</b><a href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar>واتساب ←</span><span data-en>WhatsApp →</span></a></div></div></section>
+<section class="foot-big"><div class="wrap"><img src="brand/logo-gold.png" alt="Syrian Eagle Properties"><div class="fc"><span data-ar>تواصل معنا</span><span data-en>Talk to us</span><a href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar>واتساب ←</span><span data-en>WhatsApp →</span></a></div></div></section>
 <footer><div class="wrap"><a class="logo" href="#top"><img src="brand/mark-gold.png" alt="">SYRIAN EAGLE PROPERTIES</a><span>© 2026 Syrian Eagle Properties</span></div></footer>
 <a class="wa-fab" href="https://wa.me/971555550035" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 
@@ -623,7 +623,7 @@ function calc(){var a=+$('area').value,p=Math.max(0,+$('ppm').value||0),u=a*p;$(
 ['area','ppm'].forEach(function(id){$(id).addEventListener('input',calc)});
 $('pchips').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$('area').value=b.dataset.a;calc()});calc();
 // copy number
-$('copyNum').addEventListener('click',function(){var b=this;function sel(){var r=document.createRange();r.selectNodeContents($('num'));var s=getSelection();s.removeAllRanges();s.addRange(r)}try{navigator.clipboard.writeText('+971555550035').then(function(){b.textContent=root.lang==='ar'?'تم النسخ':'Copied'},sel)}catch(e){sel()}});
+
 // form
 var f=$('rf');
 f.querySelectorAll('.seg').forEach(function(gp){gp.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;gp.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)})})});
