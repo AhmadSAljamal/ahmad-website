@@ -33,7 +33,7 @@ var LEADS_URL='https://script.google.com/macros/s/AKfycbxi3TzpeHf_SGZ4rcmjmcS4Px
     var d={name:name,phone:($('rCc').value+' '+$('rPhone').value.trim()).trim(),email:em,goal:'Eagle Hills Syria – '+proj,ptype:$('rType').value,budget:$('rBudget').value,area:$('rRes').value.trim(),timeline:'',via:'WhatsApp',message:$('rMsg').value.trim(),lang:ar?'AR':'EN',page:'Eagle Hills Syria guide'};
     var msg=(ar?'مرحباً أحمد، سجّلت اهتمامي بمشروع إيجل هيلز سوريا:':'Hi Ahmad, I registered interest in Eagle Hills Syria:')+'\n• '+d.name+' · '+d.phone+(em?' · '+em:'')+'\n• '+proj+' · '+d.ptype+'\n• '+d.budget+(d.area?' · '+d.area:'')+(d.message?'\n• '+d.message:'');
     $('rWa').href='https://wa.me/971555550035?text='+encodeURIComponent(msg);
-    function done(){f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
+    function done(){try{window.fbq&&fbq('track','Lead',{content_name:'Eagle Hills Syria'})}catch(e){}f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
     if(!LEADS_URL){done();return}
     $('rBtn').disabled=true; fetch(LEADS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}).then(done,done);
   });

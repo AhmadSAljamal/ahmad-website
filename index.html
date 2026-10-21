@@ -1,4 +1,6 @@
 <title>Ahmad Al Jamal Real Estate</title>
+<!-- Meta Pixel: paste your Pixel ID between the quotes to switch it on -->
+<script>window.META_PIXEL_ID='';(function(id){if(!id)return;!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init',id);fbq('track','PageView');})(window.META_PIXEL_ID);</script>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Ahmad Sami Al Jamal — real estate advisor in Dubai. Homes, offices, retail shops, off-plan and Golden Visa through property.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -2196,7 +2198,7 @@ var LEADS_URL = 'https://script.google.com/macros/s/AKfycbxi3TzpeHf_SGZ4rcmjmcS4
     var d={name:name,phone:phone,email:email,goal:pv('goal'),ptype:$('r-ptype').value,budget:$('r-budget').value,area:$('r-area').value.trim(),timeline:pv('timeline'),via:pv('via'),message:$('r-msg').value.trim(),lang:ar?'AR':'EN',page:location.href.slice(0,200)};
     var wa=(ar?'مرحباً أحمد، سجّلت اهتمامي على موقعك:':'Hi Ahmad, I just registered on your website:')+'\n• '+d.name+' · '+d.phone+(d.email?' · '+d.email:'')+'\n• '+d.goal+' · '+d.ptype+'\n• '+d.budget+(d.area?' · '+d.area:'')+'\n• '+d.timeline+(d.message?'\n• '+d.message:'');
     $('regWa').href='https://wa.me/971555550035?text='+encodeURIComponent(wa);
-    function done(){f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
+    function done(){try{window.fbq&&fbq('track','Lead',{content_name:'Dubai site'})}catch(e){}f.classList.add('sent');f.scrollIntoView({behavior:'smooth',block:'center'})}
     if(!LEADS_URL){done();window.open($('regWa').href,'_blank','noopener');return}
     $('regBtn').disabled=true;
     fetch(LEADS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}).then(done,done);
