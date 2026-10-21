@@ -13,13 +13,13 @@ export default function App(){
   return (<>
 
 
-<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><img src={LOGO} alt="" /><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
+<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><svg className="se-mark" style={{width:72,height:72}} viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="currentColor" strokeWidth="1.2"/><path d="M8 25 L20 13 L32 25" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 29 L20 22 L27 29" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" opacity=".6"/></svg><strong className="se-word" style={{display:"block",margin:"10px 0 4px"}}>SYRIAN EAGLE</strong><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
 <div className="glow" id="glow" aria-hidden="true"></div>
 <div className="scroll-prog" id="prog" aria-hidden="true"></div>
 <div className="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div className="grain" aria-hidden="true"></div>
 <header className="top">
   <div className="wrap">
-    <a className="brand" href="#top"><img src={LOGO} alt="AJ" /><span><b><span data-ar="">أحمد الجمال</span><span data-en="">Ahmad Al Jamal</span></b><span data-ar="">مستشار عقاري</span><span data-en="">Real estate advisor</span></span></a>
+    <a className="brand se" href="#top" aria-label="Syrian Eagle"><svg className="se-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M8 25 L20 13 L32 25" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 29 L20 22 L27 29" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" opacity=".6"/></svg><strong className="se-word">SYRIAN EAGLE</strong><span><span data-ar="">دليل مشاريع سوريا · مع أحمد الجمال</span><span data-en="">Syria projects guide · with Ahmad Al Jamal</span></span></a>
     <nav className="links" aria-label="Sections">
       <a href="#destinations"><span data-ar="">الوجهتان</span><span data-en="">Destinations</span></a>
       <a href="#developer"><span data-ar="">المطوّر</span><span data-en="">Developer</span></a>
