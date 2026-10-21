@@ -263,6 +263,31 @@ h2{position:relative}
 @media (max-width:560px){.foot-big .wrap{grid-template-columns:1fr;justify-items:center}.foot-big .fc{text-align:center}}
 @media (prefers-reduced-motion:reduce){.dimg img,.strip figure img{transition:none}}
 
+
+/* ===== Damascus clock + video call booking ===== */
+.clock{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:#CFE0E5;border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:6px 14px}
+.clock b{font:600 14px var(--body);color:var(--sand);direction:ltr;font-variant-numeric:tabular-nums}
+.clock i{width:7px;height:7px;border-radius:50%;background:#5BD28F;display:inline-block}
+.book{padding-block:110px}
+.bgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.bcard{background:var(--petrol);color:#fff;border-radius:22px;padding:34px;display:grid;gap:18px;position:relative;overflow:hidden}
+.bcard h3{color:#fff;font-size:1.6rem}
+.bcard .now{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.bcard .now b{font:700 3rem var(--kufi);color:var(--sand);direction:ltr;font-variant-numeric:tabular-nums;line-height:1}
+.bcard .now span{color:#CFE0E5;font-size:15px}
+.bcard ul{list-style:none;padding:0;margin:0;display:grid;gap:10px;color:#CFE0E5;font-size:15px}
+.bcard li{display:flex;gap:10px}.bcard li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--sand);margin-top:9px}
+.bsteps{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:18px;counter-reset:b}
+.bsteps li{counter-increment:b;display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.bsteps li::before{content:counter(b,arabic-indic);width:44px;height:44px;border-radius:50%;background:var(--mist);color:var(--petrol);display:grid;place-items:center;font:700 1.1rem var(--kufi)}
+html[lang="en"] .bsteps li::before{content:counter(b)}
+.bsteps b{display:block;color:var(--petrol);font-family:var(--kufi);font-size:1.1rem}
+.bsteps span{color:var(--muted);font-size:15px}
+.bframe{margin-top:28px;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#fff}
+.bframe iframe{width:100%;height:640px;border:0;display:block}
+@media (max-width:980px){.bgrid{grid-template-columns:1fr}}
+@media (max-width:560px){.book{padding-block:72px}.bcard{padding:24px}.bcard .now b{font-size:2.4rem}}
+
 /* ===== Responsive ===== */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr;min-height:0}
@@ -288,6 +313,8 @@ h2{position:relative}
   form,.calc .in,.calc .out{padding:22px}
   .gateway{min-height:620px;padding-block:0 44px}
 }
+.logo{white-space:nowrap}
+@media (max-width:560px){.logo{font-size:11px;letter-spacing:.2em;gap:8px}.logo img{height:32px}.clock{padding:5px 10px;gap:6px}.clock > span{display:none}.top{gap:8px}.lang{padding:6px 12px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.gw-frame path{transition:none;stroke-dashoffset:0}.gw-mark{opacity:1;transform:none;transition:none}}
 </style>
 </head>
@@ -298,6 +325,7 @@ h2{position:relative}
   <div class="panel">
     <div class="top">
       <a class="logo" href="#top" aria-label="Syrian Eagle Properties"><img src="brand/mark-gold.png" alt="">SYRIAN EAGLE</a>
+      <span class="clock" title="Damascus time"><i></i><span data-ar>دمشق</span><span data-en>Damascus</span> <b class="dt">--:--</b></span>
       <button class="lang" type="button" id="langBtn"><span data-ar>English</span><span data-en>العربية</span></button>
     </div>
     <h1><span data-ar>سوريا الجديدة<br>تبدأ من هنا</span><span data-en>The new Syria<br>starts here</span></h1>
@@ -318,6 +346,7 @@ h2{position:relative}
       <li><a href="#map"><span data-ar>الخريطة</span><span data-en>Map</span></a></li>
       <li><a href="#price"><span data-ar>الأسعار</span><span data-en>Prices</span></a></li>
       <li><a href="#faq"><span data-ar>الأسئلة</span><span data-en>FAQ</span></a></li>
+      <li><a href="#book"><span data-ar>مكالمة فيديو</span><span data-en>Video call</span></a></li>
     </ul>
     <div class="tag"><span data-ar>سعر المتر يبدأ من</span><span data-en>Price per m² from</span><b>$1,600</b></div>
   </div>
@@ -502,6 +531,31 @@ h2{position:relative}
   </div>
 </section>
 
+<section class="book wrap" id="book">
+  <div class="bgrid">
+    <div>
+      <h2><span data-ar>احجز مكالمة فيديو</span><span data-en>Book a video call</span></h2>
+      <p class="lead"><span data-ar>20 دقيقة على Google Meet مع فريقنا: نشرح المشروعين، نجاوب على أسئلتك، ونختار معك الوحدة الأنسب. مجاناً وبدون أي التزام.</span><span data-en>A 20-minute Google Meet with our team: we walk you through both projects, answer your questions and help you pick the right home. Free, no commitment.</span></p>
+      <ol class="bsteps">
+        <li><div><b><span data-ar>اختر الوقت</span><span data-en>Pick a time</span></b><span><span data-ar>المواعيد تظهر بتوقيتك المحلي أينما كنت.</span><span data-en>Slots show in your own local time, wherever you are.</span></span></div></li>
+        <li><div><b><span data-ar>يصلك رابط Google Meet</span><span data-en>Get your Google Meet link</span></b><span><span data-ar>رسالة تأكيد على بريدك فيها الرابط، مع تذكير قبل الموعد.</span><span data-en>A confirmation email with the link, plus a reminder before the call.</span></span></div></li>
+        <li><div><b><span data-ar>اضغط وانضم</span><span data-en>Tap and join</span></b><span><span data-ar>من الموبايل أو الكمبيوتر، بدون تثبيت أي برنامج.</span><span data-en>From your phone or computer, nothing to install.</span></span></div></li>
+      </ol>
+      <div class="row" style="margin-top:28px"><a class="btn dark" id="bookBtn" href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar>اختر موعدك</span><span data-en>Choose your time</span></a></div>
+    </div>
+    <aside class="bcard">
+      <h3><span data-ar>الساعة الآن في دمشق</span><span data-en>Time now in Damascus</span></h3>
+      <div class="now"><b class="dt">--:--</b><span class="dd"></span></div>
+      <ul>
+        <li><span data-ar>مواعيد المكالمات من الأحد إلى الخميس، 10 صباحاً حتى 8 مساءً بتوقيت دمشق.</span><span data-en>Calls Sunday to Thursday, 10 am to 8 pm Damascus time.</span></li>
+        <li><span data-ar>توقيت دمشق ثابت على مدار السنة (UTC+3).</span><span data-en>Damascus time is UTC+3 all year.</span></li>
+        <li class="yours"></li>
+      </ul>
+    </aside>
+  </div>
+  <div class="bframe" id="bframe" hidden></div>
+</section>
+
 <section class="reg" id="register">
   <div class="wrap rgrid">
     <div>
@@ -590,6 +644,19 @@ f.addEventListener('submit',function(e){e.preventDefault();if($('rWeb').value)re
 });
 // film tabs
 (function(){var v=$('film-v'),tb=$('ftabs');if(!v||!tb)return;tb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;tb.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});v.pause();v.setAttribute('poster',b.dataset.poster);v.querySelector('source').src=b.dataset.src;v.load();v.play().catch(function(){})})})();
+// Damascus clock
+(function(){var tz='Asia/Damascus';function tick(){var d=new Date(),l=root.lang==='ar'?'ar-SY':'en-GB';
+  var tm=d.toLocaleTimeString('en-GB',{timeZone:tz,hour:'2-digit',minute:'2-digit',hour12:false});
+  document.querySelectorAll('.dt').forEach(function(e){e.textContent=tm});
+  var dd=document.querySelector('.dd');if(dd)dd.textContent=d.toLocaleDateString(l,{timeZone:tz,weekday:'long',day:'numeric',month:'long'});
+  var y=document.querySelector('.bcard .yours');if(y){var mine=Intl.DateTimeFormat().resolvedOptions().timeZone;
+    var off=function(z){var p=new Intl.DateTimeFormat('en-US',{timeZone:z,timeZoneName:'shortOffset'}).formatToParts(d).find(function(x){return x.type==='timeZoneName'});return p?p.value:''};
+    if(mine&&mine!==tz){var my=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false});y.textContent=(root.lang==='ar'?'الساعة عندك الآن ':'Your time now ')+my+' ('+off(mine).replace('GMT','UTC')+')';y.hidden=false}else y.hidden=true}}
+  tick();setInterval(tick,15000);$('langBtn').addEventListener('click',function(){setTimeout(tick,0)})})();
+// Google Meet booking: paste the Google Calendar booking page link here
+(function(){var BOOKING_URL='';var b=$('bookBtn');if(!b)return;
+  if(BOOKING_URL){b.href=BOOKING_URL;var f=$('bframe');f.innerHTML='<iframe src="'+BOOKING_URL+'" title="Book a video call" loading="lazy"></iframe>';f.hidden=false}
+  else{b.href='https://wa.me/971555550035?text='+encodeURIComponent('مرحباً Syrian Eagle، بدي احجز مكالمة فيديو على Google Meet. الوقت المناسب إلي: ')}})();
 // gateway: arch draws once, gold drifters rise through it
 (function(){var sec=$('gateway'),cv=$('gwCv');if(!sec||!cv)return;var ctx=cv.getContext('2d'),still=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var w=0,h=0,dpr=Math.min(2,devicePixelRatio||1),raf=0,vis=false,t=0,N=innerWidth<700?240:480,P=[],seed=1963;
