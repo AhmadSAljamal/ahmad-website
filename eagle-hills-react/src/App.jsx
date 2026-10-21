@@ -352,21 +352,6 @@ export default function App(){
 </section>
 <div className="ablaq" aria-hidden="true"></div>
 
-<section className="sec wrap" id="advisor">
-  <div className="adv">
-    <AdvisorOrb logo="brand/mark-gold.png" />
-    <div>
-      <Eyebrow ar="لماذا Syrian Eagle" en="Why Syrian Eagle" />
-      <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">فريق يعرف المشاريع على المخطط</span><span data-en="">A team that knows off-plan</span></h2>
-      <ul>
-        <li><span data-ar="">خبرة تزيد على 11 سنة في مبيعات المشاريع على المخطط والمخططات الرئيسية.</span><span data-en="">11+ years of experience in off-plan and master-development sales.</span></li>
-        <li><span data-ar="">خبرة من داخل كبرى شركات التطوير، ونعرف كيف تُسعّر الإطلاقات.</span><span data-en="">Experience from inside major developers; we know how launches are priced.</span></li>
-        <li><span data-ar="">نتابع معك أينما كنت، بلغتك وبوضوح.</span><span data-en="">We follow up with you wherever you are, in your language.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <section className="sec wrap rb-host" id="faq"><BgDots />
   <div className="sec-head">
     <Eyebrow ar="أسئلة شائعة" en="FAQ" />

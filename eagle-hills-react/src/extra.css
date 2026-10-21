@@ -117,3 +117,8 @@ html[lang="en"] .eyebrow{letter-spacing:.26em!important}
 @media (prefers-reduced-motion:reduce){.gw-frame path{transition:none;stroke-dashoffset:0}.gw-mark{opacity:1;transform:none;transition:none}}
 @media (max-width:560px){.gateway{min-height:640px;padding-block:0 48px}.gw-content{max-width:86vw}.gw-frame{height:88%}}
 .gateway{width:100vw;margin-inline:calc(50% - 50vw)}.gateway::before{content:"";position:absolute;inset:0 0 auto;height:140px;background:linear-gradient(#03243A,transparent);z-index:1;pointer-events:none}
+.why3{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:16px}
+.why3 li{display:grid;gap:4px;padding-inline-start:16px;border-inline-start:2px solid var(--brand-gold)}
+.why3 li::before{display:none!important}
+.why3 b{color:var(--brand-gold-2);font-weight:600;font-size:1.05rem}
+.why3 li>span{color:#C9D6DA}
