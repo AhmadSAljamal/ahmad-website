@@ -425,9 +425,7 @@ export default function App(){
 
 <GatewayFinale />
 <footer className="wrap">
-  <p><span data-ar="">صفحة تعريفية مستقلة من Syrian Eagle للاستشارات العقارية. ليست الموقع الرسمي لشركة إيجل هيلز. المعلومات مأخوذة مما نشره المطوّر ووسائل الإعلام حتى تشرين الأول 2026، وقد تتغير. الصور رسوم توضيحية.</span><span data-en="">An independent guide by Syrian Eagle property advisory. This is not Eagle Hills' official website. Information is taken from what the developer and the press published up to October 2026 and may change. Images are illustrations.</span></p>
-  <p className="src"><span data-ar="">المصادر:</span><span data-en="">Sources:</span> <a href="https://eaglehillssyria.com/ar/" target="_blank" rel="noopener">eaglehillssyria.com</a> · <a href="https://damascusheights.com/ar/" target="_blank" rel="noopener">damascusheights.com</a> · <a href="https://latakiayachtsandmarina.com/ar/" target="_blank" rel="noopener">latakiayachtsandmarina.com</a> · <a href="https://gulfnews.com/business/property/eagle-hills-enters-syria-with-damascus-latakia-deals-1.500700060" target="_blank" rel="noopener">Gulf News</a></p>
-  <p>© 2026 Syrian Eagle</p>
+  <p>© 2026 Syrian Eagle Properties</p>
 </footer>
 
 
