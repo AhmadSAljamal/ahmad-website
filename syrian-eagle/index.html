@@ -209,6 +209,39 @@ footer .logo img{height:28px}
 .wa-fab{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));inset-inline-start:calc(20px + env(safe-area-inset-left,0px));width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(0,0,0,.4);z-index:50}
 .wa-fab svg{width:30px;height:30px;fill:#fff}
 
+
+/* ===== Film ===== */
+.film{padding-block:40px 30px}
+.film-box{position:relative;border-radius:22px;overflow:hidden;background:#0A2C38;aspect-ratio:16/9;margin-top:28px;max-width:100%}
+.film-box video{width:100%;height:100%;object-fit:cover;display:block;background:#0A2C38}
+.ftabs{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.ftabs button{border:1px solid var(--line);background:#fff;border-radius:30px;padding:8px 16px;font:500 14px var(--body);color:var(--petrol);cursor:pointer}
+.ftabs button.on{background:var(--petrol);color:#fff;border-color:var(--petrol)}
+/* ===== Developer + timeline ===== */
+.dev{padding-block:110px 40px}
+.devgrid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start;margin-top:40px}
+.dfacts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.dfacts div{border:1px solid var(--line);border-radius:14px;padding:16px}
+.dfacts b{display:block;font:600 1.6rem var(--kufi);color:var(--petrol)}
+.dfacts span{font-size:14px;color:var(--muted)}
+.countries{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.countries span{background:var(--mist);border-radius:30px;padding:6px 14px;font-size:14px;color:var(--petrol)}
+.countries span.new{background:var(--sand);font-weight:500}
+.founder{display:flex;gap:18px;align-items:center;margin-top:28px;padding:20px;border-radius:18px;background:var(--petrol);color:#fff}
+.founder img{width:84px;height:84px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--sand)}
+.founder b{display:block;font-family:var(--kufi);font-size:1.15rem}
+.founder p{margin:4px 0 0;color:#CFE0E5;font-size:15px}
+.founder q{display:block;margin-top:8px;color:var(--sand);font-size:15px}
+.tl{list-style:none;padding:0;margin:0;border-inline-start:2px solid var(--line);display:grid;gap:26px}
+.tl li{position:relative;padding-inline-start:26px}
+.tl li::before{content:"";position:absolute;inset-inline-start:-8px;top:8px;width:14px;height:14px;border-radius:50%;background:#fff;border:2px solid var(--sea)}
+.tl li.now::before{background:var(--sand);border-color:var(--sand)}
+.tl time{font:600 14px var(--body);color:var(--sea)}
+.tl b{display:block;font-family:var(--kufi);color:var(--petrol);font-size:1.15rem;margin-top:2px}
+.tl span{color:var(--muted);font-size:15px}
+@media (max-width:980px){.devgrid{grid-template-columns:1fr}}
+@media (max-width:560px){.dfacts{grid-template-columns:1fr 1fr}.dev{padding-block:72px 20px}}
+
 /* ===== Responsive ===== */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr;min-height:0}
@@ -304,6 +337,16 @@ footer .logo img{height:28px}
   </div>
 </section>
 
+<section class="film wrap" id="film">
+  <h2><span data-ar>شاهد المشروع</span><span data-en>Watch the project</span></h2>
+  <div class="ftabs" id="ftabs">
+    <button type="button" class="on" data-src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" data-poster="media/coast-1.jpg"><span data-ar>الفيلم الكامل</span><span data-en>Full film</span></button>
+    <button type="button" data-src="https://syriacdn.eaglehills.ai/videos/damascus-heights-final-desktop-v5.mp4" data-poster="media/dam-2.jpg"><span data-ar>تلال دمشق</span><span data-en>Damascus Heights</span></button>
+    <button type="button" data-src="https://syriacdn.eaglehills.ai/videos/latakia-marina-final-desktop-v6.mp4" data-poster="media/lat-4.jpg"><span data-ar>مارينا اللاذقية</span><span data-en>Latakia Marina</span></button>
+  </div>
+  <div class="film-box"><video id="film-v" controls playsinline preload="none" poster="media/coast-1.jpg"><source src="https://syriacdn.eaglehills.ai/videos/eagle-hills-syria-full-projects-v3-desktop.mp4" type="video/mp4"></video></div>
+</section>
+
 <section class="gal" id="gallery" aria-label="Gallery">
   <div class="wrap gal-head">
     <h2><span data-ar>صور من المشروعين</span><span data-en>A look inside both projects</span></h2>
@@ -347,6 +390,28 @@ footer .logo img{height:28px}
         <text class="" x="55.4" y="276.9" style="font-size:14px;fill:#E3C892"><tspan data-ar>تلال دمشق</tspan><tspan data-en>Damascus Heights</tspan></text>
       </svg>
     </div>
+  </div>
+</section>
+
+<section class="dev wrap" id="developer">
+  <h2><span data-ar>المطوّر والمسار حتى اليوم</span><span data-en>The developer, and the road so far</span></h2>
+  <div class="devgrid">
+    <div>
+      <p class="lead" style="margin-top:0"><span data-ar>إيجل هيلز شركة استثمار وتطوير عقاري خاصة مقرها أبوظبي، تبني مجتمعات متكاملة تجمع السكن والفنادق والتجزئة والمساحات الخضراء.</span><span data-en>Eagle Hills is a private real estate investment and development company based in Abu Dhabi, building complete communities of homes, hotels, retail and green space.</span></p>
+      <div class="dfacts" style="margin-top:22px">
+        <div><b>2014</b><span data-ar>سنة التأسيس</span><span data-en>founded</span></div>
+        <div><b>10</b><span data-ar>دول بما فيها سوريا</span><span data-en>countries incl. Syria</span></div>
+        <div><b><span data-ar>أبوظبي</span><span data-en>Abu Dhabi</span></b><span data-ar>المقر الرئيسي</span><span data-en>headquarters</span></div>
+      </div>
+      <div class="countries"><span data-ar>الإمارات</span><span data-en>UAE</span><span data-ar>صربيا</span><span data-en>Serbia</span><span data-ar>البحرين</span><span data-en>Bahrain</span><span data-ar>عُمان</span><span data-en>Oman</span><span data-ar>الأردن</span><span data-en>Jordan</span><span data-ar>جورجيا</span><span data-en>Georgia</span><span data-ar>إثيوبيا</span><span data-en>Ethiopia</span><span data-ar>لاتفيا</span><span data-en>Latvia</span><span data-ar>ألبانيا</span><span data-en>Albania</span><span class="new" data-ar>سوريا · جديد</span><span class="new" data-en>Syria · new</span></div>
+      <div class="founder"><img src="media/alabbar.jpg" alt="Mohamed Alabbar" loading="lazy"><div><b><span data-ar>محمد العبار، المؤسس</span><span data-en>Mohamed Alabbar, founder</span></b><p><span data-ar>مؤسس إعمار العقارية التي بنت برج خليفة، ومؤسس منصة نون.</span><span data-en>Founder of Emaar, the company behind Burj Khalifa, and of noon.</span></p><q><span data-ar>بداية جديدة لإيجل هيلز في سوريا</span><span data-en>A new beginning for Eagle Hills in Syria</span></q></div></div>
+    </div>
+    <ol class="tl">
+      <li><time><span data-ar>أيار 2026</span><span data-en>May 2026</span></time><b><span data-ar>الإعلان الأول</span><span data-en>First announcement</span></b><span><span data-ar>تقارير إقليمية عن دراسة مشاريع في سوريا بقيمة تتجاوز 50 مليار دولار.</span><span data-en>Regional reports of projects under study in Syria worth over $50 billion.</span></span></li>
+      <li><time><span data-ar>تموز 2026</span><span data-en>July 2026</span></time><b><span data-ar>حجم الاستثمار</span><span data-en>Size of the investment</span></b><span><span data-ar>بلومبرغ تقدّر الاستثمارات بما لا يقل عن 20 مليار دولار.</span><span data-en>Bloomberg estimates at least $20 billion of investment.</span></span></li>
+      <li><time><span data-ar>5 تشرين الأول 2026</span><span data-en>5 October 2026</span></time><b><span data-ar>توقيع الاتفاقية الإطارية</span><span data-en>Framework agreement signed</span></b><span><span data-ar>في قصر الشعب بدمشق، مع وزارتي الأشغال العامة والإسكان والسياحة.</span><span data-en>At the People's Palace in Damascus, with the ministries of public works and housing, and tourism.</span></span></li>
+      <li class="now"><time><span data-ar>الآن</span><span data-en>Now</span></time><b><span data-ar>التسجيل مفتوح</span><span data-en>Registration is open</span></b><span><span data-ar>الأسعار التفصيلية وخطط الدفع تُعلن لاحقاً.</span><span data-en>Detailed prices and payment plans will follow.</span></span></li>
+    </ol>
   </div>
 </section>
 
@@ -500,6 +565,8 @@ f.addEventListener('submit',function(e){e.preventDefault();if($('rWeb').value)re
   if(!LEADS_URL){done();return}
   $('rBtn').disabled=true;fetch(LEADS_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(d)}).then(done,done);
 });
+// film tabs
+(function(){var v=$('film-v'),tb=$('ftabs');if(!v||!tb)return;tb.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;tb.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b)});v.pause();v.setAttribute('poster',b.dataset.poster);v.querySelector('source').src=b.dataset.src;v.load();v.play().catch(function(){})})})();
 // gateway: arch draws once, gold drifters rise through it
 (function(){var sec=$('gateway'),cv=$('gwCv');if(!sec||!cv)return;var ctx=cv.getContext('2d'),still=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var w=0,h=0,dpr=Math.min(2,devicePixelRatio||1),raf=0,vis=false,t=0,N=innerWidth<700?240:480,P=[],seed=1963;
