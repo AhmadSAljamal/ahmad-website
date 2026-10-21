@@ -389,8 +389,7 @@ export default function App(){
       <RevealHeading ar="كن من أوائل من يعرف" en="Be among the first to know" />
       <p className="lead"><span data-ar="">اترك بياناتك وسنتواصل معك خلال يوم عمل واحد، ونرسل لك الأسعار والمخططات فور صدورها.</span><span data-en="">Leave your details and we'll call you within one working day, and send prices and plans the moment they are released.</span></p>
       <div className="contact-line"><span className="num" id="num">+971 55 555 0035</span><button className="pill" type="button" id="copyNum"><span data-ar="">نسخ الرقم</span><span data-en="">Copy number</span></button></div>
-      <p className="note" dir="ltr" style={{textAlign:"start"}}>ahmadsamialjamal@gmail.com</p>
-    </div>
+          </div>
     <form className="rf" id="rf" noValidate>
       <div className="field"><label><span data-ar="">الوجهة</span><span data-en="">Destination</span></label>
         <div className="seg" data-name="project"><button type="button" className="on" data-v="Damascus Heights"><span data-ar="">تلال دمشق</span><span data-en="">Damascus Heights</span></button><button type="button" data-v="Latakia Yachts &amp; Marina"><span data-ar="">اللاذقية لليخوت والمارينا</span><span data-en="">Latakia Marina</span></button><button type="button" data-v="Both"><span data-ar="">الاثنتان</span><span data-en="">Both</span></button></div></div>

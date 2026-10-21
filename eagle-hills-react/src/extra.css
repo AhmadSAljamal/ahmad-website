@@ -80,3 +80,22 @@ html[lang=en] .hero h1{font-size:clamp(2.4rem,5.6vw,4.8rem)!important}
 @media (max-width:420px){.se-word{font-size:.68rem;letter-spacing:.05em}.se-mark{width:28px;height:28px}}
 .se-mark{object-fit:contain}
 .se-intro{width:min(240px,60vw);height:auto;display:block;margin:0 auto 8px}
+
+/* ===== Brand alignment with the Syrian Eagle Properties logo (frontend-design pass) =====
+   Gold line-art + deep navy; thin wide-tracked caps; hairline rules like "— PROPERTIES —". */
+:root{--brand-gold:#D3B47E;--brand-gold-2:#E9D5A8;--brand-navy:#021226}
+.btn.solid{background:var(--brand-gold)!important;color:var(--brand-navy)!important;box-shadow:0 14px 34px -18px rgba(211,180,126,.85)!important}
+.btn.solid::after{display:none!important}
+.btn.ghost{border-color:rgba(211,180,126,.55)!important}
+.pill.gold{background:var(--brand-gold)!important;color:var(--brand-navy)!important;border-color:var(--brand-gold)!important;box-shadow:none!important}
+.eyebrow{position:relative;background:none!important;border:0!important;padding:0!important;color:var(--brand-gold)!important;gap:12px!important;font-weight:400!important;box-shadow:none!important}
+.eyebrow::before,.eyebrow::after{content:""!important;display:block!important;width:26px!important;height:1px!important;border-radius:0!important;background:currentColor!important;box-shadow:none!important;opacity:.75;animation:none!important;position:static!important;transform:none!important}
+html[lang="en"] .eyebrow{letter-spacing:.26em!important}
+.hero-title .grad .split-word,.hero-title .grad > *{background:none!important;-webkit-background-clip:border-box!important;background-clip:border-box!important;color:inherit!important}
+.hero-title{font-weight:600}
+.se-word{font-weight:400!important;letter-spacing:.3em!important;color:var(--brand-gold)!important}
+@media (max-width:420px){.se-word{letter-spacing:.14em!important}}
+::selection{background:rgba(211,180,126,.35)}
+:focus-visible{outline-color:var(--brand-gold)!important}
+.seg button.on{background:var(--brand-gold)!important;color:var(--brand-navy)!important;border-color:var(--brand-gold)!important}
+.hero .eyebrow{text-shadow:0 1px 10px rgba(2,18,38,.9)}
