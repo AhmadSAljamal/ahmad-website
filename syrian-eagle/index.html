@@ -242,6 +242,27 @@ footer .logo img{height:28px}
 @media (max-width:980px){.devgrid{grid-template-columns:1fr}}
 @media (max-width:560px){.dfacts{grid-template-columns:1fr 1fr}.dev{padding-block:72px 20px}}
 
+
+/* ===== Brand polish: the Damascus arch as the recurring motif ===== */
+.dimg{border-radius:0;aspect-ratio:4/4.4;clip-path:url(#archClip);transition:transform .6s}
+.dimg img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.d:hover .dimg img{transform:scale(1.04)}
+.panel{position:relative;overflow:hidden}
+.panel::after{content:"";position:absolute;inset-inline-start:-60px;bottom:-40px;width:320px;height:440px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 600'%3E%3Cpath d='M24 600V262Q24 186 96 140Q164 98 200 24Q236 98 304 140Q376 186 376 262V600' fill='none' stroke='%23E3C892' stroke-width='2'/%3E%3Cpath d='M44 600V266Q44 198 108 157Q170 118 200 62Q230 118 292 157Q356 198 356 266V600' fill='none' stroke='%23E3C892' stroke-width='1'/%3E%3C/svg%3E") bottom/contain no-repeat;opacity:.16;pointer-events:none}
+.panel > *{position:relative;z-index:1}
+.strip figure img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.strip figure:hover img{transform:scale(1.05)}
+.founder img{border-radius:50%}
+h2{position:relative}
+.foot-big{background:var(--petrol-2);color:#CFE0E5;padding-block:56px 10px}
+.foot-big .wrap{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:end}
+.foot-big img{width:200px;height:auto}
+.foot-big .fc{display:grid;gap:6px;text-align:end;font-size:15px}
+.foot-big .fc b{font:600 1.4rem var(--kufi);color:#fff;direction:ltr}
+.foot-big .fc a{color:var(--sand);text-decoration:none}
+@media (max-width:560px){.foot-big .wrap{grid-template-columns:1fr;justify-items:center}.foot-big .fc{text-align:center}}
+@media (prefers-reduced-motion:reduce){.dimg img,.strip figure img{transition:none}}
+
 /* ===== Responsive ===== */
 @media (max-width:980px){
   .hero{grid-template-columns:1fr;min-height:0}
@@ -272,6 +293,7 @@ footer .logo img{height:28px}
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><clipPath id="archClip" clipPathUnits="objectBoundingBox"><path d="M0,1V.36Q0,.25 .17,.18Q.38,.1 .5,0Q.62,.1 .83,.18Q1,.25 1,.36V1Z"/></clipPath></svg>
 <header class="hero" id="top">
   <div class="panel">
     <div class="top">
@@ -525,6 +547,7 @@ footer .logo img{height:28px}
 </section>
 </main>
 
+<section class="foot-big"><div class="wrap"><img src="brand/logo-gold.png" alt="Syrian Eagle Properties"><div class="fc"><span data-ar>تواصل معنا</span><span data-en>Talk to us</span><b>+971 55 555 0035</b><a href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar>واتساب ←</span><span data-en>WhatsApp →</span></a></div></div></section>
 <footer><div class="wrap"><a class="logo" href="#top"><img src="brand/mark-gold.png" alt="">SYRIAN EAGLE PROPERTIES</a><span>© 2026 Syrian Eagle Properties</span></div></footer>
 <a class="wa-fab" href="https://wa.me/971555550035" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3z"/></svg></a>
 
