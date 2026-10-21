@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, SeaLoop, PriceExamples, BuyerChecklist } from './bits.jsx';
+import { HeroTitle, RevealHeading, Eyebrow, Gallery3D, RBThreads, RBParticles, RBAurora, RBAurora2, Spot, HeroRays, BgGalaxy, BgBeams, BgPrism, BgDots, BgSilk, AdvisorOrb, Electric, Glare, HeritageSphere, StepsStack, GatewayFinale, PriceExamples, BuyerChecklist } from './bits.jsx';
 import { runLegacy, runMotion } from './legacy.js';
 import LOGO from './logo.png';
 
@@ -423,23 +423,14 @@ export default function App(){
 </section>
 </main>
 
-<SeaLoop />
-<section className="sea3d" id="sea3d">
-  <canvas id="seaGL" aria-hidden="true"></canvas>
-  <div className="sea-ui wrap">
-    <Eyebrow ar="المتوسط بانتظارك" en="The Mediterranean is waiting" />
-    <h2 className="sea-title"><span data-ar="">بيتك القادم<br />على البحر</span><span data-en="">Your next home<br />by the sea</span></h2>
-    <div className="cta-row"><a className="btn solid" href="#register"><span data-ar="">احجز أولويتك</span><span data-en="">Get priority access</span></a><button className="btn ghost" type="button" id="sound2"><span data-ar="">🔊 اسمع البحر</span><span data-en="">🔊 Hear the sea</span></button></div>
-  </div>
-  <div className="sea-hint" aria-hidden="true"><span data-ar="">حرّك الماوس أو إصبعك</span><span data-en="">Move your mouse or finger</span></div>
-</section>
+<GatewayFinale />
 <footer className="wrap">
   <p><span data-ar="">صفحة تعريفية مستقلة من Syrian Eagle للاستشارات العقارية. ليست الموقع الرسمي لشركة إيجل هيلز. المعلومات مأخوذة مما نشره المطوّر ووسائل الإعلام حتى تشرين الأول 2026، وقد تتغير. الصور رسوم توضيحية.</span><span data-en="">An independent guide by Syrian Eagle property advisory. This is not Eagle Hills' official website. Information is taken from what the developer and the press published up to October 2026 and may change. Images are illustrations.</span></p>
   <p className="src"><span data-ar="">المصادر:</span><span data-en="">Sources:</span> <a href="https://eaglehillssyria.com/ar/" target="_blank" rel="noopener">eaglehillssyria.com</a> · <a href="https://damascusheights.com/ar/" target="_blank" rel="noopener">damascusheights.com</a> · <a href="https://latakiayachtsandmarina.com/ar/" target="_blank" rel="noopener">latakiayachtsandmarina.com</a> · <a href="https://gulfnews.com/business/property/eagle-hills-enters-syria-with-damascus-latakia-deals-1.500700060" target="_blank" rel="noopener">Gulf News</a></p>
   <p>© 2026 Syrian Eagle</p>
 </footer>
 
-<button className="sound" type="button" id="sound" aria-pressed="false"><span className="ico">🔊</span><span className="lbl"><span data-ar="">صوت البحر</span><span data-en="">Sea sound</span></span></button>
+
 <a className="mcta" href="#register"><span data-ar="">سجّل اهتمامك · الأولوية للأوائل</span><span data-en="">Register · early priority</span></a>
 <a className="wa-fab" href="https://wa.me/971555550035" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.6-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.1.1.6-.1 1.2z" /></svg></a>
 

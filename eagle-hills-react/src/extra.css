@@ -99,3 +99,21 @@ html[lang="en"] .eyebrow{letter-spacing:.26em!important}
 :focus-visible{outline-color:var(--brand-gold)!important}
 .seg button.on{background:var(--brand-gold)!important;color:var(--brand-navy)!important;border-color:var(--brand-gold)!important}
 .hero .eyebrow{text-shadow:0 1px 10px rgba(2,18,38,.9)}
+/* Gateway finale */
+.gateway{position:relative;overflow:hidden;background:#021226;min-height:clamp(620px,92vh,860px);display:grid;place-items:end center;padding-block:0 72px;margin-top:40px}
+.gateway canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.gw-frame{position:absolute;inset:auto 0 0 0;height:min(92%,780px);display:flex;justify-content:center;pointer-events:none}
+.gw-frame svg{height:100%;width:auto;max-width:94vw;overflow:visible}
+.gw-frame path{fill:none;stroke:#D3B47E;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.6s cubic-bezier(.65,0,.35,1)}
+.gw-out{stroke-width:2.2}.gw-in{stroke-width:1.1;opacity:.7;transition-delay:.35s!important}
+.gateway.in .gw-frame path{stroke-dashoffset:0}
+.gw-content{position:relative;z-index:2;display:grid;justify-items:center;text-align:center;gap:14px;max-width:min(420px,74vw);padding-inline:8px}
+.gw-mark{width:64px;height:auto;opacity:0;transform:translateY(10px);transition:opacity 1s 1.6s,transform 1s 1.6s}
+.gateway.in .gw-mark{opacity:1;transform:none}
+.gw-content .eyebrow{justify-self:center}
+.gw-content h2{font-family:var(--f-display,Alexandria),sans-serif;font-weight:600;font-size:clamp(1.9rem,4.4vw,2.8rem);line-height:1.15;margin:0;color:#F4EEDF;text-wrap:balance}
+.gw-sub{color:#C9D6DA;font-size:1.05rem;max-width:44ch;margin:0}
+.gw-content .cta-row{justify-content:center;margin-top:10px}
+@media (prefers-reduced-motion:reduce){.gw-frame path{transition:none;stroke-dashoffset:0}.gw-mark{opacity:1;transform:none;transition:none}}
+@media (max-width:560px){.gateway{min-height:640px;padding-block:0 48px}.gw-content{max-width:86vw}.gw-frame{height:88%}}
+.gateway{width:100vw;margin-inline:calc(50% - 50vw)}.gateway::before{content:"";position:absolute;inset:0 0 auto;height:140px;background:linear-gradient(#03243A,transparent);z-index:1;pointer-events:none}

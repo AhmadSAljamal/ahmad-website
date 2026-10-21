@@ -204,3 +204,64 @@ export function BuyerChecklist(){
     </details>
   );
 }
+
+/* Closing section: the logo's Damascus arch, drawn once in gold, with a flow field of
+   gold drifters rising through it (algorithmic-art). One orchestrated moment. */
+const ARCH_OUT = 'M24 600V262Q24 186 96 140Q164 98 200 24Q236 98 304 140Q376 186 376 262V600';
+const ARCH_IN = 'M44 600V266Q44 198 108 157Q170 118 200 62Q230 118 292 157Q356 198 356 266V600';
+export function GatewayFinale(){
+  const lang = useLang();
+  const secRef = useRef(null), cvRef = useRef(null);
+  const [on, setOn] = useState(false);
+  useEffect(() => {
+    const sec = secRef.current, cv = cvRef.current; if (!sec || !cv) return;
+    const ctx = cv.getContext('2d'); const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let w = 0, h = 0, dpr = Math.min(2, devicePixelRatio || 1), raf = 0, vis = false, t = 0;
+    const N = innerWidth < 700 ? 260 : 520, P = [];
+    // smooth value noise
+    const perm = new Uint8Array(512); for (let i = 0; i < 256; i++) perm[i] = i;
+    let seed = 1963; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+    for (let i = 255; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [perm[i], perm[j]] = [perm[j], perm[i]]; }
+    for (let i = 0; i < 256; i++) perm[i + 256] = perm[i];
+    const fade = x => x * x * (3 - 2 * x);
+    const noise = (x, y) => { const xi = Math.floor(x) & 255, yi = Math.floor(y) & 255, xf = x - Math.floor(x), yf = y - Math.floor(y);
+      const a = perm[perm[xi] + yi] / 255, b = perm[perm[xi + 1] + yi] / 255, c = perm[perm[xi] + yi + 1] / 255, d = perm[perm[xi + 1] + yi + 1] / 255;
+      const u = fade(xf), v = fade(yf); return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v; };
+    const spawn = (p, init) => { const cx = w / 2, span = Math.min(w * 0.36, 300);
+      p.x = cx + (rnd() * 2 - 1) * span; p.y = init ? rnd() * h : h + rnd() * 40; p.v = 0.4 + rnd() * 0.9; p.a = 0.25 + rnd() * 0.55; p.s = rnd() < 0.12 ? 1.6 : 0.9; };
+    const size = () => { const r = sec.getBoundingClientRect(); w = r.width; h = r.height; cv.width = w * dpr; cv.height = h * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.fillStyle = '#021226'; ctx.fillRect(0, 0, w, h); };
+    size(); for (let i = 0; i < N; i++) { const p = {}; spawn(p, true); P.push(p); }
+    const step = () => {
+      t += 0.004; ctx.fillStyle = 'rgba(2,18,38,0.08)'; ctx.fillRect(0, 0, w, h);
+      for (const p of P) {
+        const ang = (noise(p.x * 0.004, p.y * 0.004 + t) - 0.5) * 2.4 - Math.PI / 2;
+        const nx = p.x + Math.cos(ang) * p.v * 1.4, ny = p.y + Math.sin(ang) * p.v * 1.4;
+        ctx.strokeStyle = `rgba(211,180,126,${p.a})`; ctx.lineWidth = p.s; ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); ctx.stroke();
+        p.x = nx; p.y = ny; if (p.y < -10 || p.x < -10 || p.x > w + 10) spawn(p, false);
+      }
+    };
+    const loop = () => { if (!vis) return; step(); raf = requestAnimationFrame(loop); };
+    if (still) { for (let i = 0; i < 160; i++) step(); }
+    const io = new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis) { setOn(true); if (!still) { cancelAnimationFrame(raf); raf = requestAnimationFrame(loop); } } }, { threshold: 0.15 });
+    io.observe(sec); addEventListener('resize', size);
+    return () => { io.disconnect(); cancelAnimationFrame(raf); removeEventListener('resize', size); };
+  }, []);
+  return (
+    <section className={'gateway' + (on ? ' in' : '')} id="gateway" ref={secRef}>
+      <canvas ref={cvRef} aria-hidden="true" />
+      <div className="gw-frame" aria-hidden="true">
+        <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMax meet"><path className="gw-out" d={ARCH_OUT} pathLength="1" /><path className="gw-in" d={ARCH_IN} pathLength="1" /></svg>
+      </div>
+      <div className="gw-content">
+        <img className="gw-mark" src="brand/mark-gold.png" alt="" />
+        <p className="eyebrow">{lang === 'ar' ? 'Syrian Eagle Properties' : 'Syrian Eagle Properties'}</p>
+        <h2>{lang === 'ar' ? 'بوابتك إلى سوريا الجديدة' : 'Your gateway to the new Syria'}</h2>
+        <p className="gw-sub">{lang === 'ar' ? 'سجّل اهتمامك اليوم، ونكون معك من أول سؤال حتى استلام المفتاح.' : 'Register today. We stay with you from the first question to the day you get the keys.'}</p>
+        <div className="cta-row">
+          <a className="btn solid" href="#register">{lang === 'ar' ? 'سجّل اهتمامك' : 'Register your interest'}</a>
+          <a className="btn ghost" href="https://wa.me/971555550035" target="_blank" rel="noopener">{lang === 'ar' ? 'تحدّث معنا على واتساب' : 'Talk to us on WhatsApp'}</a>
+        </div>
+      </div>
+    </section>
+  );
+}

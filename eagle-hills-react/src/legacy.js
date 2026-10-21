@@ -80,7 +80,7 @@ var LEADS_URL='https://script.google.com/macros/s/AKfycbxi3TzpeHf_SGZ4rcmjmcS4Px
       src.connect(f);f.connect(g);g.connect(master);src.start(0,Math.random()*3);lfo.start()}
     layer(500,.7,.55,1,.09);layer(1200,.5,.25,.9,.13);layer(260,.9,.5,1.1,.07);
     master.gain.linearRampToValueAtTime(.9,actx.currentTime+2)}
-  $('sound').addEventListener('click',function(){var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',on);
+  var sbtn=$('sound');sbtn&&sbtn.addEventListener('click',function(){var on=this.getAttribute('aria-pressed')!=='true';this.setAttribute('aria-pressed',on);
     try{if(on){if(!actx)startSea();else{actx.resume();master.gain.linearRampToValueAtTime(.9,actx.currentTime+1.5)}}else if(actx){master.gain.linearRampToValueAtTime(0,actx.currentTime+.8);setTimeout(function(){actx.suspend()},900)}}catch(e){}});
 
   // ===== WebGL sunset sea =====
@@ -127,7 +127,6 @@ var LEADS_URL='https://script.google.com/macros/s/AKfycbxi3TzpeHf_SGZ4rcmjmcS4Px
   if('IntersectionObserver' in window)new IntersectionObserver(function(es){vis=es[0].isIntersecting;if(vis)requestAnimationFrame(fr)},{rootMargin:'200px'}).observe(sec);else vis=true;
   function fr(now){if(!vis)return;mx+=(tx-mx)*.04;my+=(ty-my)*.04;gl.uniform2f(uR,cv.width,cv.height);gl.uniform1f(uT,still?8.:(now-t0)/1000);gl.uniform2f(uM,mx,my);gl.drawArrays(gl.TRIANGLE_STRIP,0,4);if(!still)requestAnimationFrame(fr)}
   requestAnimationFrame(fr);})();
-  $('sound2').addEventListener('click',function(){$('sound').click()});
 
   // map pins <-> cards
   function pick(k){document.querySelectorAll('.pin').forEach(function(p){p.classList.toggle('on',p.dataset.k===k)});document.querySelectorAll('.mcard').forEach(function(c){c.classList.toggle('on',c.dataset.k===k)})}
@@ -188,7 +187,6 @@ export function runMotion(){
   [['.facts4 .gcard'],['.units .unit'],['.steps li'],['.who article'],['.gl-row'],['.ftl li'],['.vids .vcard'],['.map-panel .mcard']].forEach(function(g){var els=document.querySelectorAll(g[0]);if(!els.length)return;gsap.from(els,{y:24,opacity:0,duration:.7,ease:'power2.out',stagger:.06,scrollTrigger:{trigger:els[0],start:'top 90%'}})});
   // parallax media
   document.querySelectorAll('.dest-art .kb,.panel img').forEach(function(el){gsap.fromTo(el,{yPercent:-6,scale:1.12},{yPercent:6,scale:1.12,ease:'none',scrollTrigger:{trigger:el.parentNode,start:'top bottom',end:'bottom top',scrub:true}})});
-  gsap.to('.sea-title',{yPercent:-30,ease:'none',scrollTrigger:{trigger:'#sea3d',start:'top bottom',end:'bottom top',scrub:true}});
   // ScrollVelocity marquee
   var tr=document.querySelector('.mq-track');if(tr){tr.classList.add('gsap');var dir=root.dir==='rtl'?1:-1,x=0,v=0,skew=gsap.quickSetter(tr,'skewX','deg'),setX=gsap.quickSetter(tr,'xPercent');
     ScrollTrigger.create({onUpdate:function(s){v=s.getVelocity()}});
