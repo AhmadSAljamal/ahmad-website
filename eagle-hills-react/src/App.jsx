@@ -214,13 +214,13 @@ export default function App(){
       <div className="mono portrait"><img src="media/alabbar.jpg" alt="Mohamed Alabbar" loading="lazy" /></div>
       <Eyebrow ar="المؤسس ورئيس مجلس الإدارة" en="Founder and Chairman" />
       <RevealHeading ar="محمد العبار" en="Mohamed Alabbar" />
-      <p className="lead"><span data-ar="">رجل الأعمال الإماراتي الذي أسّس إعمار العقارية، الشركة التي بنت برج خليفة ودبي مول. أسّس أيضاً منصة نون، ويرأس مجموعة أمريكانا، ويقود اليوم إيجل هيلز.</span><span data-en="">The Emirati businessman who founded Emaar Properties, the company behind Burj Khalifa and The Dubai Mall. He also founded noon, chairs Americana Group, and today leads Eagle Hills.</span></p>
+      <p className="lead"><span data-ar="">رجل الأعمال الإماراتي الذي أسّس إعمار العقارية، الشركة التي بنت برج خليفة. أسّس أيضاً منصة نون، ويرأس مجموعة أمريكانا، ويقود اليوم إيجل هيلز.</span><span data-en="">The Emirati businessman who founded Emaar Properties, the company behind Burj Khalifa. He also founded noon, chairs Americana Group, and today leads Eagle Hills.</span></p>
       <blockquote><span data-ar="">«بداية جديدة لإيجل هيلز في سوريا»</span><span data-en="">"A new beginning for Eagle Hills in Syria."</span><cite><span data-ar="">محمد العبار، تشرين الأول 2026</span><span data-en="">Mohamed Alabbar, October 2026</span></cite></blockquote>
     </div>
     <ol className="ftl">
-      <li><time>1956</time><p><span data-ar="">وُلد في دبي.</span><span data-en="">Born in Dubai.</span></p></li>
+      <li><time>1956</time><p><span data-ar="">وُلد في الإمارات.</span><span data-en="">Born in the UAE.</span></p></li>
       <li><time>1981</time><p><span data-ar="">تخرّج في إدارة الأعمال من جامعة سياتل.</span><span data-en="">Business degree from Seattle University.</span></p></li>
-      <li><time>1992</time><p><span data-ar="">أول مدير عام لدائرة التنمية الاقتصادية في دبي.</span><span data-en="">Founding director general of Dubai's Department of Economic Development.</span></p></li>
+      <li><time>1992</time><p><span data-ar="">أول مدير عام لدائرة التنمية الاقتصادية.</span><span data-en="">Founding director general of the Department of Economic Development.</span></p></li>
       <li><time>1997</time><p><span data-ar="">أسّس إعمار العقارية.</span><span data-en="">Founded Emaar Properties.</span></p></li>
       <li><time>2010</time><p><span data-ar="">افتتاح برج خليفة، أطول مبنى في العالم.</span><span data-en="">Burj Khalifa, the world's tallest building, opens.</span></p></li>
       <li><time>2014</time><p><span data-ar="">أسّس إيجل هيلز في أبوظبي.</span><span data-en="">Founded Eagle Hills in Abu Dhabi.</span></p></li>
@@ -331,7 +331,7 @@ export default function App(){
   </div>
   <div className="who">
     <article><h3><span data-ar="">المقيمون في سوريا</span><span data-en="">Residents of Syria</span></h3><p><span data-ar="">أفراد وشركات داخل البلد، يسجّلون اهتمامهم مباشرة.</span><span data-en="">Individuals and companies in the country register directly.</span></p></article>
-    <article><h3><span data-ar="">السوريون في الخارج والعائدون</span><span data-en="">Syrians abroad and returnees</span></h3><p><span data-ar="">من الإمارات والخليج وأوروبا. نتابع معك كل خطوة من دبي.</span><span data-en="">From the UAE, the Gulf or Europe. We handle each step with you from Dubai.</span></p></article>
+    <article><h3><span data-ar="">السوريون في الخارج والعائدون</span><span data-en="">Syrians abroad and returnees</span></h3><p><span data-ar="">من الإمارات والخليج وأوروبا. نتابع معك كل خطوة أينما كنت.</span><span data-en="">From the UAE, the Gulf or Europe. We handle each step with you wherever you are.</span></p></article>
     <article><h3><span data-ar="">المستثمرون الأجانب</span><span data-en="">Foreign investors</span></h3><p><span data-ar="">يمكنهم تسجيل الاهتمام، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">They can register interest. Requests are reviewed at the developer's discretion.</span></p></article>
   </div>
   <StepsStack />
@@ -357,11 +357,11 @@ export default function App(){
     <AdvisorOrb logo="brand/mark-gold.png" />
     <div>
       <Eyebrow ar="لماذا Syrian Eagle" en="Why Syrian Eagle" />
-      <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">فريق في دبي يعرف المشاريع على المخطط</span><span data-en="">A Dubai team that knows off-plan</span></h2>
+      <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">فريق يعرف المشاريع على المخطط</span><span data-en="">A team that knows off-plan</span></h2>
       <ul>
         <li><span data-ar="">خبرة تزيد على 11 سنة في مبيعات المشاريع على المخطط والمخططات الرئيسية.</span><span data-en="">11+ years of experience in off-plan and master-development sales.</span></li>
         <li><span data-ar="">خبرة من داخل كبرى شركات التطوير، ونعرف كيف تُسعّر الإطلاقات.</span><span data-en="">Experience from inside major developers; we know how launches are priced.</span></li>
-        <li><span data-ar="">مقرنا دبي، ونتابع معك أينما كنت، بلغتك وبوضوح.</span><span data-en="">Based in Dubai, following up with you wherever you are, in your language.</span></li>
+        <li><span data-ar="">نتابع معك أينما كنت، بلغتك وبوضوح.</span><span data-en="">We follow up with you wherever you are, in your language.</span></li>
       </ul>
     </div>
   </div>
@@ -376,7 +376,7 @@ export default function App(){
     <BuyerChecklist />
 <details><summary><span data-ar="">هل التسجيل يُلزمني بالشراء؟</span><span data-en="">Does registering commit me to buy?</span></summary><p><span data-ar="">لا. تسجيل الاهتمام لا يُنشئ أي التزام أو علاقة تعاقدية، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">No. Registering interest creates no obligation or contract, and requests are reviewed at the developer's discretion.</span></p></details>
     <details><summary><span data-ar="">هل أُعلنت خطة الدفع ومواعيد التسليم؟</span><span data-en="">Are the payment plan and handover dates out?</span></summary><p><span data-ar="">ليس بعد. المعلن حالياً هو سعر البداية 1,600 دولار للمتر المربع. سنرسل لك التفاصيل فور صدورها.</span><span data-en="">Not yet. The published figure so far is a starting price of $1,600 per m². We will send you details as soon as they are released.</span></p></details>
-    <details><summary><span data-ar="">أعيش خارج سوريا، هل أستطيع الشراء؟</span><span data-en="">I live outside Syria. Can I buy?</span></summary><p><span data-ar="">نعم، السوريون في الخارج من الفئات التي يذكرها المطوّر بالأولوية. نتابع معك الإجراءات من دبي.</span><span data-en="">Yes. Syrians abroad are among the groups the developer names for priority. We handle the process with you from Dubai.</span></p></details>
+    <details><summary><span data-ar="">أعيش خارج سوريا، هل أستطيع الشراء؟</span><span data-en="">I live outside Syria. Can I buy?</span></summary><p><span data-ar="">نعم، السوريون في الخارج من الفئات التي يذكرها المطوّر بالأولوية. نتابع معك الإجراءات خطوة بخطوة.</span><span data-en="">Yes. Syrians abroad are among the groups the developer names for priority. We handle the process with you step by step.</span></p></details>
     <details><summary><span data-ar="">ما الفرق بين دمشق واللاذقية؟</span><span data-en="">Damascus or Latakia?</span></summary><p><span data-ar="">دمشق مجتمع سكني كبير مع مدارس ومستشفى وملعب غولف، يناسب السكن الدائم. اللاذقية وجهة بحرية مع مارينا وفنادق ونادٍ شاطئي، تناسب البيت الثاني والاستثمار السياحي.</span><span data-en="">Damascus is a large residential community with schools, a hospital and golf, suited to full-time living. Latakia is a seaside destination with a marina, hotels and a beach club, suited to second homes and holiday investment.</span></p></details>
   </div>
 </section>
