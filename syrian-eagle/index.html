@@ -654,7 +654,7 @@ f.addEventListener('submit',function(e){e.preventDefault();if($('rWeb').value)re
     if(mine&&mine!==tz){var my=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit',hour12:false});y.textContent=(root.lang==='ar'?'الساعة عندك الآن ':'Your time now ')+my+' ('+off(mine).replace('GMT','UTC')+')';y.hidden=false}else y.hidden=true}}
   tick();setInterval(tick,15000);$('langBtn').addEventListener('click',function(){setTimeout(tick,0)})})();
 // Google Meet booking: paste the Google Calendar booking page link here
-(function(){var BOOKING_URL='https://calendar.google.com/calendar/appointments/schedules/AcZssZ3b5ngrnsitxEIRjrzgDWkW5wpG6Y_95NZwbeU8NcuPF1i9ysBvBpaJikBvr4d-jCuhp3woA4nY?gv=true';var b=$('bookBtn');if(!b)return;
+(function(){/* SAVED booking page (paused): https://calendar.google.com/calendar/appointments/schedules/AcZssZ3b5ngrnsitxEIRjrzgDWkW5wpG6Y_95NZwbeU8NcuPF1i9ysBvBpaJikBvr4d-jCuhp3woA4nY?gv=true */ var BOOKING_URL='';var b=$('bookBtn');if(!b)return;
   if(BOOKING_URL){b.href=BOOKING_URL;var f=$('bframe');f.innerHTML='<iframe src="'+BOOKING_URL+'" title="Book a video call" loading="lazy"></iframe>';f.hidden=false}
   else{b.href='https://wa.me/971555550035?text='+encodeURIComponent('مرحباً Syrian Eagle، بدي احجز مكالمة فيديو على Google Meet. الوقت المناسب إلي: ')}})();
 // gateway: arch draws once, gold drifters rise through it
