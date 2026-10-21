@@ -13,13 +13,13 @@ export default function App(){
   return (<>
 
 
-<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><svg className="se-mark" style={{width:72,height:72}} viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="currentColor" strokeWidth="1.2"/><path d="M8 25 L20 13 L32 25" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 29 L20 22 L27 29" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" opacity=".6"/></svg><strong className="se-word" style={{display:"block",margin:"10px 0 4px"}}>SYRIAN EAGLE</strong><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
+<div className="intro" id="intro" aria-hidden="true"><div className="intro-in"><svg className="se-mark" style={{width:72,height:72}} viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="seg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#C9963F"/><stop offset=".55" stopColor="#F3D29A"/><stop offset="1" stopColor="#FFF1D2"/></linearGradient></defs><g fill="none" stroke="url(#seg)" strokeLinecap="round"><path d="M13 39C21 24 35 14 55 11" strokeWidth="4"/><path d="M18 41C26 31 37 24 50 22.5" strokeWidth="3.6"/><path d="M23 43C29.5 36.5 37 32.5 45.5 32" strokeWidth="3.2"/></g><path d="M8 50c5-3.6 9.6-3.6 14.4 0s9.6 3.6 14.4 0 9.6-3.6 14.4 0 6.5 2.6 9 1.6" fill="none" stroke="#2FD3E0" strokeWidth="3" strokeLinecap="round"/></svg><strong className="se-word" style={{display:"block",margin:"10px 0 4px"}}>SYRIAN EAGLE</strong><p><span data-ar="">دمشق · اللاذقية</span><span data-en="">Damascus · Latakia</span></p><div className="bar"><i></i></div></div></div>
 <div className="glow" id="glow" aria-hidden="true"></div>
 <div className="scroll-prog" id="prog" aria-hidden="true"></div>
 <div className="aurora" aria-hidden="true"><i></i><i></i><i></i></div><div className="grain" aria-hidden="true"></div>
 <header className="top">
   <div className="wrap">
-    <a className="brand se" href="#top" aria-label="Syrian Eagle"><svg className="se-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="10" fill="none" stroke="currentColor" strokeWidth="1.6"/><path d="M8 25 L20 13 L32 25" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 29 L20 22 L27 29" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" opacity=".6"/></svg><strong className="se-word">SYRIAN EAGLE</strong><span><span data-ar="">دليل مشاريع سوريا · مع أحمد الجمال</span><span data-en="">Syria projects guide · with Ahmad Al Jamal</span></span></a>
+    <a className="brand se" href="#top" aria-label="Syrian Eagle"><svg className="se-mark" viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="seg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stopColor="#C9963F"/><stop offset=".55" stopColor="#F3D29A"/><stop offset="1" stopColor="#FFF1D2"/></linearGradient></defs><g fill="none" stroke="url(#seg)" strokeLinecap="round"><path d="M13 39C21 24 35 14 55 11" strokeWidth="4"/><path d="M18 41C26 31 37 24 50 22.5" strokeWidth="3.6"/><path d="M23 43C29.5 36.5 37 32.5 45.5 32" strokeWidth="3.2"/></g><path d="M8 50c5-3.6 9.6-3.6 14.4 0s9.6 3.6 14.4 0 9.6-3.6 14.4 0 6.5 2.6 9 1.6" fill="none" stroke="#2FD3E0" strokeWidth="3" strokeLinecap="round"/></svg><strong className="se-word">SYRIAN EAGLE</strong><span><span data-ar="">دليل مشاريع سوريا الجديدة</span><span data-en="">Guide to Syria's new projects</span></span></a>
     <nav className="links" aria-label="Sections">
       <a href="#destinations"><span data-ar="">الوجهتان</span><span data-en="">Destinations</span></a>
       <a href="#developer"><span data-ar="">المطوّر</span><span data-en="">Developer</span></a>
@@ -41,7 +41,7 @@ export default function App(){
   <div className="wrap">
     <p className="eyebrow rise live"><i></i><span data-ar="">مشروع إيجل هيلز في سوريا · التسجيل مفتوح الآن</span><span data-en="">Eagle Hills in Syria · Registration open now</span></p>
     <HeroTitle />
-    <p className="sub rise d2"><span data-ar="">دليل واضح لمشروعَي «تلال دمشق» و«اللاذقية لليخوت والمارينا»: الوحدات، الأسعار، من يحق له الشراء، وكيف تسجّل اهتمامك. مع أحمد الجمال، مستشارك العقاري.</span><span data-en="">A clear guide to Damascus Heights and Latakia Yachts &amp; Marina: the homes, the prices, who can buy, and how to register. With Ahmad Al Jamal, your property advisor.</span></p>
+    <p className="sub rise d2"><span data-ar="">دليل واضح لمشروعَي «تلال دمشق» و«اللاذقية لليخوت والمارينا»: الوحدات، الأسعار، من يحق له الشراء، وكيف تسجّل اهتمامك. مع فريق Syrian Eagle للاستشارات العقارية.</span><span data-en="">A clear guide to Damascus Heights and Latakia Yachts &amp; Marina: the homes, the prices, who can buy, and how to register. With the Syrian Eagle property advisory team.</span></p>
     <div className="cta-row rise d3">
       <a className="btn solid" href="#register"><span data-ar="">سجّل اهتمامك الآن</span><span data-en="">Register your interest</span> <span aria-hidden="true"><span data-ar="">←</span><span data-en="">→</span></span></a>
       <a className="btn ghost" id="waHero" href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar="">اسأل على واتساب</span><span data-en="">Ask on WhatsApp</span></a>
@@ -331,7 +331,7 @@ export default function App(){
   </div>
   <div className="who">
     <article><h3><span data-ar="">المقيمون في سوريا</span><span data-en="">Residents of Syria</span></h3><p><span data-ar="">أفراد وشركات داخل البلد، يسجّلون اهتمامهم مباشرة.</span><span data-en="">Individuals and companies in the country register directly.</span></p></article>
-    <article><h3><span data-ar="">السوريون في الخارج والعائدون</span><span data-en="">Syrians abroad and returnees</span></h3><p><span data-ar="">من الإمارات والخليج وأوروبا. أتابع معك كل خطوة من دبي.</span><span data-en="">From the UAE, the Gulf or Europe. I handle each step with you from Dubai.</span></p></article>
+    <article><h3><span data-ar="">السوريون في الخارج والعائدون</span><span data-en="">Syrians abroad and returnees</span></h3><p><span data-ar="">من الإمارات والخليج وأوروبا. نتابع معك كل خطوة من دبي.</span><span data-en="">From the UAE, the Gulf or Europe. We handle each step with you from Dubai.</span></p></article>
     <article><h3><span data-ar="">المستثمرون الأجانب</span><span data-en="">Foreign investors</span></h3><p><span data-ar="">يمكنهم تسجيل الاهتمام، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">They can register interest. Requests are reviewed at the developer's discretion.</span></p></article>
   </div>
   <StepsStack />
@@ -354,14 +354,14 @@ export default function App(){
 
 <section className="sec wrap" id="advisor">
   <div className="adv">
-    <AdvisorOrb logo={LOGO} />
+    <AdvisorOrb logo="brand/mark.svg" />
     <div>
-      <Eyebrow ar="لماذا من خلالي" en="Why through me" />
-      <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">أحمد سامي الجمال</span><span data-en="">Ahmad Sami Al Jamal</span></h2>
+      <Eyebrow ar="لماذا Syrian Eagle" en="Why Syrian Eagle" />
+      <h2 style={{fontSize:"clamp(1.7rem,3.6vw,2.4rem)"}}><span data-ar="">فريق في دبي يعرف المشاريع على المخطط</span><span data-en="">A Dubai team that knows off-plan</span></h2>
       <ul>
-        <li><span data-ar="">أكثر من 11 سنة في مبيعات المشاريع على المخطط والمخططات الرئيسية.</span><span data-en="">11+ years in off-plan and master-development sales.</span></li>
-        <li><span data-ar="">عملت مديراً إقليمياً للمبيعات لدى مطوّر كبير، وأعرف كيف تُسعّر الإطلاقات.</span><span data-en="">Former Regional Sales Director at a major developer; I know how launches are priced.</span></li>
-        <li><span data-ar="">مقيم في دبي وأتابع معك من الخارج، بلغتك وبوضوح.</span><span data-en="">Based in Dubai, following up with you from abroad, in your language.</span></li>
+        <li><span data-ar="">خبرة تزيد على 11 سنة في مبيعات المشاريع على المخطط والمخططات الرئيسية.</span><span data-en="">11+ years of experience in off-plan and master-development sales.</span></li>
+        <li><span data-ar="">خبرة من داخل كبرى شركات التطوير، ونعرف كيف تُسعّر الإطلاقات.</span><span data-en="">Experience from inside major developers; we know how launches are priced.</span></li>
+        <li><span data-ar="">مقرنا دبي، ونتابع معك أينما كنت، بلغتك وبوضوح.</span><span data-en="">Based in Dubai, following up with you wherever you are, in your language.</span></li>
       </ul>
     </div>
   </div>
@@ -375,8 +375,8 @@ export default function App(){
   <div>
     <BuyerChecklist />
 <details><summary><span data-ar="">هل التسجيل يُلزمني بالشراء؟</span><span data-en="">Does registering commit me to buy?</span></summary><p><span data-ar="">لا. تسجيل الاهتمام لا يُنشئ أي التزام أو علاقة تعاقدية، والطلبات تُراجع حسب تقدير المطوّر.</span><span data-en="">No. Registering interest creates no obligation or contract, and requests are reviewed at the developer's discretion.</span></p></details>
-    <details><summary><span data-ar="">هل أُعلنت خطة الدفع ومواعيد التسليم؟</span><span data-en="">Are the payment plan and handover dates out?</span></summary><p><span data-ar="">ليس بعد. المعلن حالياً هو سعر البداية 1,600 دولار للمتر المربع. سأرسل لك التفاصيل فور صدورها.</span><span data-en="">Not yet. The published figure so far is a starting price of $1,600 per m². I will send you details as soon as they are released.</span></p></details>
-    <details><summary><span data-ar="">أعيش خارج سوريا، هل أستطيع الشراء؟</span><span data-en="">I live outside Syria. Can I buy?</span></summary><p><span data-ar="">نعم، السوريون في الخارج من الفئات التي يذكرها المطوّر بالأولوية. أتابع معك الإجراءات من دبي.</span><span data-en="">Yes. Syrians abroad are among the groups the developer names for priority. I handle the process with you from Dubai.</span></p></details>
+    <details><summary><span data-ar="">هل أُعلنت خطة الدفع ومواعيد التسليم؟</span><span data-en="">Are the payment plan and handover dates out?</span></summary><p><span data-ar="">ليس بعد. المعلن حالياً هو سعر البداية 1,600 دولار للمتر المربع. سنرسل لك التفاصيل فور صدورها.</span><span data-en="">Not yet. The published figure so far is a starting price of $1,600 per m². We will send you details as soon as they are released.</span></p></details>
+    <details><summary><span data-ar="">أعيش خارج سوريا، هل أستطيع الشراء؟</span><span data-en="">I live outside Syria. Can I buy?</span></summary><p><span data-ar="">نعم، السوريون في الخارج من الفئات التي يذكرها المطوّر بالأولوية. نتابع معك الإجراءات من دبي.</span><span data-en="">Yes. Syrians abroad are among the groups the developer names for priority. We handle the process with you from Dubai.</span></p></details>
     <details><summary><span data-ar="">ما الفرق بين دمشق واللاذقية؟</span><span data-en="">Damascus or Latakia?</span></summary><p><span data-ar="">دمشق مجتمع سكني كبير مع مدارس ومستشفى وملعب غولف، يناسب السكن الدائم. اللاذقية وجهة بحرية مع مارينا وفنادق ونادٍ شاطئي، تناسب البيت الثاني والاستثمار السياحي.</span><span data-en="">Damascus is a large residential community with schools, a hospital and golf, suited to full-time living. Latakia is a seaside destination with a marina, hotels and a beach club, suited to second homes and holiday investment.</span></p></details>
   </div>
 </section>
@@ -387,7 +387,7 @@ export default function App(){
     <div className="sec-head">
       <Eyebrow ar="سجّل اهتمامك" en="Register your interest" />
       <RevealHeading ar="كن من أوائل من يعرف" en="Be among the first to know" />
-      <p className="lead"><span data-ar="">اترك بياناتك وسأتواصل معك خلال يوم عمل واحد، وأرسل لك الأسعار والمخططات فور صدورها.</span><span data-en="">Leave your details and I'll call you within one working day, and send prices and plans the moment they are released.</span></p>
+      <p className="lead"><span data-ar="">اترك بياناتك وسنتواصل معك خلال يوم عمل واحد، ونرسل لك الأسعار والمخططات فور صدورها.</span><span data-en="">Leave your details and we'll call you within one working day, and send prices and plans the moment they are released.</span></p>
       <div className="contact-line"><span className="num" id="num">+971 55 555 0035</span><button className="pill" type="button" id="copyNum"><span data-ar="">نسخ الرقم</span><span data-en="">Copy number</span></button></div>
       <p className="note" dir="ltr" style={{textAlign:"start"}}>ahmadsamialjamal@gmail.com</p>
     </div>
@@ -411,12 +411,12 @@ export default function App(){
       </div>
       <div className="field"><label htmlFor="rMsg"><span data-ar="">ملاحظات</span><span data-en="">Notes</span></label><textarea id="rMsg" maxLength="600"></textarea></div>
       <input className="hp" id="rWeb" tabIndex="-1" autoComplete="off" aria-hidden="true" />
-      <label className="consent" id="f-consent"><input type="checkbox" id="rOk" /><span><span data-ar="">أوافق على أن يتواصل معي أحمد الجمال بخصوص هذا المشروع.</span><span data-en="">I agree to be contacted by Ahmad Al Jamal about this project.</span></span></label>
+      <label className="consent" id="f-consent"><input type="checkbox" id="rOk" /><span><span data-ar="">أوافق على أن يتواصل معي فريق Syrian Eagle بخصوص هذا المشروع.</span><span data-en="">I agree to be contacted by the Syrian Eagle team about this project.</span></span></label>
       <button className="btn solid" type="submit" id="rBtn" style={{justifyContent:"center"}}><span data-ar="">سجّل اهتمامي</span><span data-en="">Register my interest</span></button>
       <div className="done" aria-live="polite">
         <div className="ok">✓</div>
         <h3><span data-ar="">تم تسجيل اهتمامك</span><span data-en="">You're registered</span></h3>
-        <p className="lead"><span data-ar="">سأتواصل معك خلال يوم عمل واحد. للرد الأسرع أرسل بياناتك على واتساب.</span><span data-en="">I'll be in touch within one working day. For a faster reply, send your details on WhatsApp.</span></p>
+        <p className="lead"><span data-ar="">سنتواصل معك خلال يوم عمل واحد. للرد الأسرع أرسل بياناتك على واتساب.</span><span data-en="">We'll be in touch within one working day. For a faster reply, send your details on WhatsApp.</span></p>
         <a className="btn solid" id="rWa" href="https://wa.me/971555550035" target="_blank" rel="noopener"><span data-ar="">أرسل على واتساب</span><span data-en="">Send on WhatsApp</span></a>
       </div>
     </form>
@@ -435,9 +435,9 @@ export default function App(){
   <div className="sea-hint" aria-hidden="true"><span data-ar="">حرّك الماوس أو إصبعك</span><span data-en="">Move your mouse or finger</span></div>
 </section>
 <footer className="wrap">
-  <p><span data-ar="">صفحة تعريفية مستقلة من إعداد أحمد الجمال، مستشار عقاري. ليست الموقع الرسمي لشركة إيجل هيلز. المعلومات مأخوذة مما نشره المطوّر ووسائل الإعلام حتى تشرين الأول 2026، وقد تتغير. الصور رسوم توضيحية.</span><span data-en="">An independent guide by Ahmad Al Jamal, real estate advisor. This is not Eagle Hills' official website. Information is taken from what the developer and the press published up to October 2026 and may change. Images are illustrations.</span></p>
+  <p><span data-ar="">صفحة تعريفية مستقلة من Syrian Eagle للاستشارات العقارية. ليست الموقع الرسمي لشركة إيجل هيلز. المعلومات مأخوذة مما نشره المطوّر ووسائل الإعلام حتى تشرين الأول 2026، وقد تتغير. الصور رسوم توضيحية.</span><span data-en="">An independent guide by Syrian Eagle property advisory. This is not Eagle Hills' official website. Information is taken from what the developer and the press published up to October 2026 and may change. Images are illustrations.</span></p>
   <p className="src"><span data-ar="">المصادر:</span><span data-en="">Sources:</span> <a href="https://eaglehillssyria.com/ar/" target="_blank" rel="noopener">eaglehillssyria.com</a> · <a href="https://damascusheights.com/ar/" target="_blank" rel="noopener">damascusheights.com</a> · <a href="https://latakiayachtsandmarina.com/ar/" target="_blank" rel="noopener">latakiayachtsandmarina.com</a> · <a href="https://gulfnews.com/business/property/eagle-hills-enters-syria-with-damascus-latakia-deals-1.500700060" target="_blank" rel="noopener">Gulf News</a></p>
-  <p>© 2026 <span data-ar="">أحمد سامي الجمال</span><span data-en="">Ahmad Sami Al Jamal</span></p>
+  <p>© 2026 Syrian Eagle</p>
 </footer>
 
 <button className="sound" type="button" id="sound" aria-pressed="false"><span className="ico">🔊</span><span className="lbl"><span data-ar="">صوت البحر</span><span data-en="">Sea sound</span></span></button>

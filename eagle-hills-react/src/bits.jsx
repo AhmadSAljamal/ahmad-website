@@ -111,7 +111,7 @@ export function AdvisorOrb({ logo }){
   return (
     <div className="orb-box">
       <Lazy margin="200px"><Orb colors={['#2FD3E0', '#F3D29A', '#1D4ED8']} backgroundColor="#021522" glow={1.2} hoverIntensity={0.8} followCursor /></Lazy>
-      <img src={logo} alt="AJ" />
+      <img src={logo} alt="Syrian Eagle" />
     </div>
   );
 }
@@ -151,8 +151,8 @@ export function HeritageSphere(){
 
 const STEPS = [
   ['سجّل اهتمامك', 'Register', 'املأ النموذج بالوجهة ونوع الوحدة.', 'Fill in the form with the destination and home type.'],
-  ['مكالمة تعريفية', 'Intro call', 'أتواصل معك خلال يوم عمل لفهم ميزانيتك وهدفك.', 'I call you within one working day to understand your budget and goal.'],
-  ['الطلب الرسمي', 'Official request', 'أساعدك في تقديم طلبك عبر قنوات المطوّر الرسمية.', "I help you file your request through the developer's official channels."],
+  ['مكالمة تعريفية', 'Intro call', 'نتواصل معك خلال يوم عمل لفهم ميزانيتك وهدفك.', 'We call you within one working day to understand your budget and goal.'],
+  ['الطلب الرسمي', 'Official request', 'نساعدك في تقديم طلبك عبر قنوات المطوّر الرسمية.', "We help you file your request through the developer's official channels."],
   ['عند الإطلاق', 'At launch', 'نراجع معاً الأسعار وخطة الدفع والعقد قبل أي التزام.', 'We review prices, the payment plan and the contract together before you commit.']
 ];
 export function StepsStack(){
@@ -200,7 +200,7 @@ export function BuyerChecklist(){
     <details className="check-faq" open>
       <summary>{lang === 'ar' ? 'ما الذي يجب التحقق منه قبل الشراء؟' : 'What should you check before buying?'}</summary>
       <ul className="buy-check">{items.map((t, i) => <li key={i}><i>✓</i>{t}</li>)}</ul>
-      <p>{lang === 'ar' ? 'تسجيل الاهتمام لا يعني حجزاً مؤكداً. أراجع معك كل هذه النقاط قبل أي دفعة.' : 'Registering interest is not a confirmed booking. I review every point with you before any payment.'}</p>
+      <p>{lang === 'ar' ? 'تسجيل الاهتمام لا يعني حجزاً مؤكداً. نراجع معك كل هذه النقاط قبل أي دفعة.' : 'Registering interest is not a confirmed booking. We review every point with you before any payment.'}</p>
     </details>
   );
 }
